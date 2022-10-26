@@ -26,15 +26,15 @@ public class Morph : MonoBehaviour
         if (collision.CompareTag("PowerUp"))
         {
             if (canMorph) {
-                if (Input.GetAxis("Fire1") > 0) //TODO: change key for slot 1
+                if (Input.GetAxis("Morph1") > 0)
                 {
                     Morphing(collision.gameObject); //TODO: overwrite slot 1 
                 }
-                /*
-                if (Input.GetAxis("Fire1") > 0) //TODO: change key for slot 2
+                
+                if (Input.GetAxis("Morph2") > 0)
                 {
-                    Morphing(collision.gameObject);
-                }*/
+                    Morphing(collision.gameObject); //TODO: overwrite slot 1 
+                }
             }
         }
     }
@@ -42,19 +42,17 @@ public class Morph : MonoBehaviour
     //TODO: method for applying DNA from slot
     private void CheckMorph()
     {
-        /*if (canMorph)
-        {
-            if (Input.GetAxis("Fire1") > 0) //TODO: change key for slot 1
-            {
-                //TODO: get DNA of slot one
-                Morphing(); 
-            }
-            
-            if (Input.GetAxis("Fire1") > 0) //TODO: change key for slot 2
-            {
-                Morphing(collision.gameObject);
-            }
-        }*/
+        /* if (canMorph) {
+                if (Input.GetAxis("Morph1") > 0)
+                {
+                    Morphing(collision.gameObject); //TODO: get player of slot 1
+                }
+                
+                if (Input.GetAxis("Morph2") > 0)
+                {
+                    Morphing(collision.gameObject); //TODO: get player of slot 2 
+                }
+            }*/
     }
 
     private void Morphing(GameObject powerUp)

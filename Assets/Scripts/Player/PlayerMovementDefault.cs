@@ -63,7 +63,7 @@ public class PlayerMovementDefault : MonoBehaviour
     {
         if (Mathf.Abs(Input.GetAxis("Jump")) > 0)
         {
-            rb.AddForce(new Vector2(0f, jumpForce));
+            rb.velocity = new Vector2(0f, jumpForce);
             animator.SetBool("IsJumping", true); //enable jumping animation with Animator variable "isJumping"
         }
     }

@@ -10448,6 +10448,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1655810662089520935, guid: 2533c132a1ccb7841b4f852ed2a42397, type: 3}
+      propertyPath: jumpForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655810662089520935, guid: 2533c132a1ccb7841b4f852ed2a42397, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
