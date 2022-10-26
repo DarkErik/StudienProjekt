@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class PlayerMovementDefault : MonoBehaviour
 {
+
     [SerializeField] private float walkSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float movementSmoothing;
