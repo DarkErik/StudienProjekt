@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        CameraController.SetFollowTarget(transform);
     }
 
     public static bool IsPlayer(GameObject go)
