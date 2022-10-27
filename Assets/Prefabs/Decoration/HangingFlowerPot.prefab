@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 8748990375159700943}
   - component: {fileID: 8748990375159700942}
   - component: {fileID: 8748990375159700937}
+  - component: {fileID: 7112897377616831223}
   m_Layer: 0
   m_Name: HangingFlowerPot
   m_TagString: Untagged
@@ -169,8 +170,8 @@ MonoBehaviour:
   - {fileID: 8748990374390112177}
   - {fileID: 8748990375402815428}
   m_Bounds:
-    m_Center: {x: 0.34759617, y: 0.17217326, z: 0}
-    m_Extent: {x: 1.830946, y: 2.6102145, z: 0}
+    m_Center: {x: -0.03567493, y: 0.2031343, z: 0}
+    m_Extent: {x: 1.9101453, y: 2.5748456, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -194,6 +195,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7112897377616831223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748990375159700936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a11a1e50b4a5e0449838aa8e1c1e07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8748990375402815431
 GameObject:
   m_ObjectHideFlags: 0
