@@ -63,4 +63,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 
-*.dwlt
+UserSettings/Layouts/
+*dwlt
+default-2021.dwlt
