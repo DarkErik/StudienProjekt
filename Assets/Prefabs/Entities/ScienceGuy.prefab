@@ -161,9 +161,10 @@ GameObject:
   - component: {fileID: 1416334723863360935}
   - component: {fileID: 6803036103810900850}
   - component: {fileID: 6803036103810900851}
+  - component: {fileID: 7441215479232400724}
   m_Layer: 0
   m_Name: ScienceGuy
-  m_TagString: Untagged
+  m_TagString: Scientist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,3 +326,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7441215479232400724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803036103810900848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847772c7b6b7d8b4397c86781de1e8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

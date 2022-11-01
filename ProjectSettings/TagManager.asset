@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PowerUp
+  - Scientist
   layers:
   - Default
   - TransparentFX
