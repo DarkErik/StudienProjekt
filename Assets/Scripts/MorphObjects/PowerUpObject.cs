@@ -9,5 +9,6 @@ public class PowerUpObject : MonoBehaviour
     public GameObject PlayerObject
     {
         get { return playerObject; }
+        set { playerObject = value; }
     }
 }
