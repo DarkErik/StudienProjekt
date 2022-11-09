@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Morph : MonoBehaviour
 {
-    [SerializeField] private PowerUpObject item1;
-    [SerializeField] private PowerUpObject item2;
-    [SerializeField] private Image item1Image;
-    [SerializeField] private Image item2Image;
+    private PowerUpObject item1;
+    private PowerUpObject item2;
+    private Image item1Image;
+    private Image item2Image;
 
     private float timer;
     private bool canMorph;
@@ -19,6 +19,13 @@ public class Morph : MonoBehaviour
         timer = 0f;
         canMorph = false;
         inCollider = false;
+
+        GameObject itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1");
+        GameObject itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2");
+        item1 = itemSlot1.GetComponent<PowerUpObject>();
+        item2 = itemSlot2.GetComponent<PowerUpObject>();
+        item1Image = itemSlot1.GetComponent<Image>();
+        item2Image = itemSlot2.GetComponent<Image>();
     }
 
     void Update()
@@ -42,6 +49,7 @@ public class Morph : MonoBehaviour
                     GameObject newPlayer = collision.gameObject.GetComponent<PowerUpObject>().PlayerObject;
                     item1.PlayerObject = newPlayer;
                     item1Image.sprite = newPlayer.GetComponentInChildren<SpriteRenderer>().sprite;
+                    item1Image.SetNativeSize();
                     Morphing(newPlayer);
                 }
                 
@@ -50,6 +58,7 @@ public class Morph : MonoBehaviour
                     GameObject newPlayer = collision.gameObject.GetComponent<PowerUpObject>().PlayerObject;
                     item2.PlayerObject = newPlayer;
                     item2Image.sprite = newPlayer.GetComponentInChildren<SpriteRenderer>().sprite;
+                    item2Image.SetNativeSize();
                     Morphing(newPlayer);
                 }
             }
