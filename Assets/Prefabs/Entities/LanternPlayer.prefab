@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 640350741190943160}
   - component: {fileID: 640350741190943161}
+  - component: {fileID: 7979040984385562254}
+  - component: {fileID: -2478459771221885163}
   - component: {fileID: 640350741190943166}
   - component: {fileID: 640350741190943167}
   m_Layer: 3
@@ -52,6 +54,31 @@ MonoBehaviour:
   spotLight: {fileID: 640350741454786617}
   lanternGreenMaterial: {fileID: 2100000, guid: c5f834a4b346c81479a5569ab527b3e1, type: 2}
   lanternRedMaterial: {fileID: 2100000, guid: dba7c2964f067c340acc062617484492, type: 2}
+--- !u!114 &7979040984385562254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640350741190943164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8b06b415a71194b883a492d6bde238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2478459771221885163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640350741190943164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065733cbae3bfca4d9b5a261e78f95ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPlayer: {fileID: 1655810662089520957, guid: 2533c132a1ccb7841b4f852ed2a42397, type: 3}
 --- !u!50 &640350741190943166
 Rigidbody2D:
   serializedVersion: 4
@@ -279,7 +306,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 857cd07550fc0cf42b3b3c191bb0c996, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
