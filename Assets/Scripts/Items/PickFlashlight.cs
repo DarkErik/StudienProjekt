@@ -26,7 +26,6 @@ public class PickFlashlight : MonoBehaviour
             if(collision.tag == "PowerUp")
             {
                 animator.SetBool("Pick", true);
-                collision.gameObject.transform.SetParent(this.transform);
             }
             animator.SetBool("PutDown", false);
             pickUp = false;
