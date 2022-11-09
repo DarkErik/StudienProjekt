@@ -2692,6 +2692,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Scientist
       objectReference: {fileID: 0}
+    - target: {fileID: 6803036103810900854, guid: 313db5352834c4e4fa10d2a1029f40ed, type: 3}
+      propertyPath: isPatrolling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803036103810900854, guid: 313db5352834c4e4fa10d2a1029f40ed, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
     - target: {fileID: 6803036103810900857, guid: 313db5352834c4e4fa10d2a1029f40ed, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3218,3 +3226,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb1299365d7210c4fa08e3bbcf8e5649, type: 3}
+--- !u!1 &4381561244925399380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4381561244119133179, guid: bb1299365d7210c4fa08e3bbcf8e5649, type: 3}
+  m_PrefabInstance: {fileID: 4381561244925399379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &4381561244925399381
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4381561244925399380}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
