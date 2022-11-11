@@ -99,6 +99,7 @@ public class Morph : MonoBehaviour
     private void DisableOldPlayer(GameObject oldPlayer)
     {
         Collider2D[] colliders = oldPlayer.GetComponents<Collider2D>();
+        Collider2D[] collidersChildren = oldPlayer.GetComponentsInChildren<Collider2D>();
         MonoBehaviour[] scripts = oldPlayer.GetComponents<MonoBehaviour>();
         Rigidbody2D rb = oldPlayer.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Static;
@@ -106,6 +107,12 @@ public class Morph : MonoBehaviour
         if (colliders != null)
         {
             foreach (Collider2D collider in colliders)
+                collider.enabled = false;
+        }
+
+        if (collidersChildren != null)
+        {
+            foreach (Collider2D collider in collidersChildren)
                 collider.enabled = false;
         }
 
