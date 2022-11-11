@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 
 public class LightFlickering : MonoBehaviour
 {
-    [SerializeField] private Light2D light;
+    [SerializeField] public Light2D light;
     [SerializeField] private float minIntensity = 0f;
     [SerializeField] private float maxIntensity = 1f;
     [SerializeField] [Range(1, 50)] private int smoothing = 5;
