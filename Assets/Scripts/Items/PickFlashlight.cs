@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class PickFlashlight : MonoBehaviour
 {
-    public bool pickUp = false;
-    public bool putDown = false;
-    [SerializeField] private Animator animator;
-    private void Update()
+    [SerializeField] GameObject handPos;
+   /* private void Update()
     {
-        if (putDown)
+        
+        if (GetComponent<Patrol>().isPickUp)
         {
-            animator.SetBool("PutDown", true);
-            putDown = false;
-            animator.SetBool("Pick", false);
+            handPos.SetActive(true);
         }
+        if (GetComponent<Patrol>().isPickUp)
+        {
+            handPos.SetActive(false);
+        }
+        
+    }*/
+
+    void ActivateHandPos()
+    {
+        handPos.SetActive(true);
     }
 
-
-    //if the flashlight is on, pick it up when scientist is touching it, then set scientist as a parent
-    private void OnTriggerEnter2D(Collider2D collision)
+    void DeactivateHandPos()
     {
-        if (pickUp)
-        {
-            if(collision.tag == "PowerUp")
-            {
-                animator.SetBool("Pick", true);
-            }
-            animator.SetBool("PutDown", false);
-            pickUp = false;
-        }
+        handPos.SetActive(false);
     }
+
 }
