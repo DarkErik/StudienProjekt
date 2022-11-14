@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4337302611331536605}
   - component: {fileID: 8013285885023592989}
   - component: {fileID: 8013285885023592988}
+  - component: {fileID: -2923173914740406817}
   m_Layer: 3
   m_Name: CoilSpringPlayer
   m_TagString: Player
@@ -186,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfc88766d7678f4cbeeb9d1f92ca8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
+  walkSpeed: 6
   jumpForce: 2.5
   movementSmoothing: 0.15
   groundLayer:
@@ -267,3 +268,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9421663, y: 1.6506231}
   m_EdgeRadius: 0
+--- !u!114 &-2923173914740406817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013285885023592963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91568b6356f3a904da656cb065d2fac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uuid: 1

@@ -15,7 +15,7 @@ public class PlayerData
 	}
 
 	//Data
-	public int playerTransformationIndex = 0;
+	public int transformationUUID = 0;
 
 
 	public void ApplyPlayerData(GameObject player) {
@@ -23,6 +23,6 @@ public class PlayerData
 	}
 
 	public void UpdateCurrentData() {
-		this.playerTransformationIndex = PlayerController.Instance.playerTransformationIndex;
+		this.transformationUUID = PlayerController.Instance.getUUID();
 	}
 }

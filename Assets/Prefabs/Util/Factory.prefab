@@ -46,4 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransformations:
   - {fileID: 1655810662089520957, guid: 2533c132a1ccb7841b4f852ed2a42397, type: 3}
-  - {fileID: 5085473276166920931, guid: b8b010440feb0cd41aca9ce4e4ad866f, type: 3}
+  - {fileID: 8013285885023592963, guid: c567c83b7ec91a04bbdf734618d3447d, type: 3}
+  - {fileID: 640350741190943164, guid: 75aeefdefeee716478e82946c6939d53, type: 3}
+  - {fileID: 9157842903482560917, guid: e6864fd2762b7764c8cad0bb7c261b52, type: 3}
