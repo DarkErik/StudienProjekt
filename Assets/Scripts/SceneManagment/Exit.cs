@@ -54,7 +54,7 @@ public class Exit : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D collision) {
 		
-		if (PlayerController.IsPlayer(collision.gameObject)) {
+		if (PlayerController.IsPlayer(Util.GetRootTransform(collision.transform).gameObject)) {
 			Time.timeScale = 0f;
 			PlayerData.instance.UpdateCurrentData();
 			exitSpawnName = destinationExitName;

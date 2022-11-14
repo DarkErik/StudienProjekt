@@ -145,4 +145,15 @@ public static class Util {
     {
 		return v;
     }
+
+	public static Transform GetRootTransform(Transform t)
+    {
+		if (t == null) return null;	
+
+		while(t.parent != null)
+        {
+			t = t.parent;
+        }
+		return t;
+    }
 }
