@@ -5,8 +5,6 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
     public bool isPatrolling; //enable/disable partolling
-    public bool pickUp = false;
-    public bool putDown = false;
 
     [SerializeField] private float walkSpeed; //change speed
     [SerializeField] private LayerMask groundLayer; //layer of the ground
@@ -27,21 +25,6 @@ public class Patrol : MonoBehaviour
 
     void Update()
     {
-        //check for flashlight item interaction first
-        if (pickUp)
-        {
-            animator.SetBool("Pick", true); //initiate pickup animation
-            pickUp = false;
-            isPatrolling = false;
-        }
-        if (putDown)
-        {
-            Debug.Log("putting down");
-            animator.SetBool("Put", true); //initiate putdown animation
-            putDown = false;
-            isPatrolling = false;
-        }
-
         //patrol
         if (isPatrolling)
             Partolling();
@@ -83,5 +66,18 @@ public class Patrol : MonoBehaviour
         flipMultiplier *= -1;
         isPatrolling = true;
         flip = false;
+    }
+
+    public void PickUp()
+    {
+        {
+            animator.SetBool("Pick", true); //initiate pickup animation
+            isPatrolling = false;
+        }
+    }
+public void PutDown()
+    {
+        animator.SetBool("Put", true); //initiate putdown animation
+        isPatrolling = false;
     }
 }

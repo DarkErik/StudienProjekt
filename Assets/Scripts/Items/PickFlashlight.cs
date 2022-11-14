@@ -4,20 +4,8 @@ using UnityEngine;
 
 public class PickFlashlight : MonoBehaviour
 {
+    public bool puttingDown = false;
     [SerializeField] GameObject handPos;
-   /* private void Update()
-    {
-        
-        if (GetComponent<Patrol>().isPickUp)
-        {
-            handPos.SetActive(true);
-        }
-        if (GetComponent<Patrol>().isPickUp)
-        {
-            handPos.SetActive(false);
-        }
-        
-    }*/
 
     void ActivateHandPos()
     {
