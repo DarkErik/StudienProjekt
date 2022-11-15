@@ -16,7 +16,7 @@ public class Demorph : MonoBehaviour
     private void CheckDemorph()
     {
         DisableOldPlayer(gameObject);
-        GameObject newPlayerObject = Instantiate(defaultPlayer, gameObject.transform.position, gameObject.transform.rotation);
+        GameObject newPlayerObject = Instantiate(defaultPlayer, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+0.3f, gameObject.transform.position.z), Quaternion.identity);
         StartCoroutine(FadeIn(newPlayerObject));
     }
 
