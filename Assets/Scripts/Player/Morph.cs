@@ -20,8 +20,8 @@ public class Morph : MonoBehaviour
         canMorph = false;
         inCollider = false;
 
-        GameObject itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1");
-        GameObject itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2");
+        GameObject itemSlot1 = GameObject.Find("Manager/MainCanvas/ItemOverlay/Item1");
+        GameObject itemSlot2 = GameObject.Find("Manager/MainCanvas/ItemOverlay/Item2");
         item1 = itemSlot1.GetComponent<PowerUpObject>();
         item2 = itemSlot2.GetComponent<PowerUpObject>();
         item1Image = itemSlot1.GetComponent<Image>();
@@ -165,4 +165,19 @@ public class Morph : MonoBehaviour
         }
     }
 
+
+    public static void RemoveAllItemsAndSlots()
+    {
+        GameObject itemSlot1 = GameObject.Find("Manager/MainCanvas/ItemOverlay/Item1");
+        GameObject itemSlot2 = GameObject.Find("Manager/MainCanvas/ItemOverlay/Item2");
+        PowerUpObject item1 = itemSlot1.GetComponent<PowerUpObject>();
+        PowerUpObject item2 = itemSlot2.GetComponent<PowerUpObject>();
+        Image item1Image = itemSlot1.GetComponent<Image>();
+        Image item2Image = itemSlot2.GetComponent<Image>();
+
+        item1.PlayerObject = null;
+        item2.PlayerObject = null;
+        item1Image.sprite = null;
+        item2Image.sprite = null;
+    }
 }
