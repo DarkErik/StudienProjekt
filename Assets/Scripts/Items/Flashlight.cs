@@ -46,6 +46,14 @@ public class Flashlight : MonoBehaviour
             if(scientist.GetComponent<PickFlashlight>().puttingDown == true)
             {
                 transform.SetParent(null);
+                if(transform.rotation.y != 0)
+                {
+                    transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                }
             }
         }
     }
@@ -63,8 +71,10 @@ public class Flashlight : MonoBehaviour
                 if (collision.CompareTag("ScientistHand")) //if colliding with the scientists HandPoint, get picked up
                 {
                     transform.SetParent(collision.transform);
-                    transform.rotation = Quaternion.identity;
-                    transform.localPosition = new Vector3(0.27f, 0.15f, 0f);
+                    //transform.rotation = collision.transform.rotation * Quaternion.Euler(0f, 0f, 0f);
+                    transform.localRotation = Quaternion.Euler(0f, 0f, 137f);
+                    //transform.rotation = Quaternion.identity;
+                    transform.localPosition = new Vector3(0f, 0f, 0f);
                     isPickUp = true;
                 }
             }
