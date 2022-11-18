@@ -21,7 +21,7 @@ public class PlayerMovementDefault : MonoBehaviour
 
     void Start()
     {
-        isFacingRight = Vector3.Dot(Vector3.right, transform.forward) > 0.9f;
+        isFacingRight = true;
 
         isGrounded = true;
     }
