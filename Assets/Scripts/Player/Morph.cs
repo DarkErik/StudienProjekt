@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Morph : MonoBehaviour
 {
+    private GameObject itemSlot1;
+    private GameObject itemSlot2;
+
     private PowerUpObject item1;
     private PowerUpObject item2;
     private Image item1Image;
@@ -20,21 +23,47 @@ public class Morph : MonoBehaviour
         canMorph = false;
         inCollider = false;
 
-        GameObject itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1");
-        GameObject itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2");
-        item1 = itemSlot1.GetComponent<PowerUpObject>();
-        item2 = itemSlot2.GetComponent<PowerUpObject>();
-        item1Image = itemSlot1.GetComponent<Image>();
-        item2Image = itemSlot2.GetComponent<Image>();
+        itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1");
+        itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2");
+
+        if (itemSlot1 != null)
+        {
+            item1 = itemSlot1.GetComponent<PowerUpObject>();
+            item1Image = itemSlot1.GetComponent<Image>();
+        }
+
+        if (itemSlot2 != null)
+        {
+            item2 = itemSlot2.GetComponent<PowerUpObject>();
+            item2Image = itemSlot2.GetComponent<Image>();
+        }
+        
     }
 
     void Update()
     {
-        if (!canMorph)
-            canMorph = 0.5f < (timer += Time.deltaTime);
+        if (itemSlot1 == null)
+        {
+            itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1");
+            item1 = itemSlot1.GetComponent<PowerUpObject>();
+            item1Image = itemSlot1.GetComponent<Image>();
+        }
 
-        if (!inCollider)
-            CheckMorph();
+        if (itemSlot2 == null)
+        {
+            itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2");
+            item2 = itemSlot2.GetComponent<PowerUpObject>();
+            item2Image = itemSlot2.GetComponent<Image>();
+        }
+
+        if (itemSlot1 != null && itemSlot2 != null)
+        {
+            if (!canMorph)
+                canMorph = 0.5f < (timer += Time.deltaTime);
+
+            if (!inCollider)
+                CheckMorph();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
