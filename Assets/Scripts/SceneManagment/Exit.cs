@@ -47,14 +47,14 @@ public class Exit : MonoBehaviour {
 		
 		Destroy(GameObject.Find("Player"));
 		Destroy(GameObject.Find("Player(Clone)"));
-		GameObject player = Instantiate(Factory.Instance.playerTransformations[data.playerTransformationIndex], spawnPosition, default);
+		GameObject player = Instantiate(Factory.Instance.GetPlayerTransformation(data.transformationUUID), spawnPosition, default);
 		data.ApplyPlayerData(player);
 	}
 
 
 	public void OnTriggerEnter2D(Collider2D collision) {
 		
-		if (PlayerController.IsPlayer(collision.gameObject)) {
+		if (PlayerController.IsPlayer(Util.GetRootTransform(collision.transform).gameObject)) {
 			Time.timeScale = 0f;
 			PlayerData.instance.UpdateCurrentData();
 			exitSpawnName = destinationExitName;

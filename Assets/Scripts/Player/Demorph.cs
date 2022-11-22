@@ -13,11 +13,14 @@ public class Demorph : MonoBehaviour
     }
 
     //start morphing to default player
-    private void CheckDemorph()
+    public void CheckDemorph()
     {
-        DisableOldPlayer(gameObject);
-        GameObject newPlayerObject = Instantiate(defaultPlayer, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+0.3f, gameObject.transform.position.z), Quaternion.identity);
-        StartCoroutine(FadeIn(newPlayerObject));
+        if (PlayerController.Instance.getUUID() != 0)
+        {
+            DisableOldPlayer(gameObject);
+            GameObject newPlayerObject = Instantiate(defaultPlayer, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.3f, gameObject.transform.position.z), Quaternion.identity);
+            StartCoroutine(FadeIn(newPlayerObject));
+        }
     }
 
     //disable old player's scripts and colliders

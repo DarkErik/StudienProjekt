@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { private set; get; }
 
-    public int playerTransformationIndex = 0;
+    [SerializeField] private int uuid = 0;
 
     private void Awake()
     {
@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
         CameraController.SetFollowTarget(transform);
     }
 
+    public int getUUID()
+    {
+        return uuid;
+    }
     public static bool IsPlayer(GameObject go)
     {
         return go == Instance.gameObject;

@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1cd27e761a3154f940db292d4d3d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
-  jumpForce: 7
+  walkSpeed: 6
+  jumpForce: 7.9
   movementSmoothing: 0.05
   groundLayer:
     serializedVersion: 2
@@ -73,10 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8b06b415a71194b883a492d6bde238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item1: {fileID: 0}
-  item2: {fileID: 0}
-  item1Image: {fileID: 0}
-  item2Image: {fileID: 0}
 --- !u!114 &1655810662089520929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91568b6356f3a904da656cb065d2fac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransformationIndex: 0
+  uuid: 0
 --- !u!1 &1655810662805659654
 GameObject:
   m_ObjectHideFlags: 0
