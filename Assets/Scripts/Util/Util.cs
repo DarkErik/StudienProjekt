@@ -157,12 +157,32 @@ public static class Util {
 		return t;
     }
 
-	public static bool ArrayContains(Object[] arr, Object item)
+	public static bool ArrayContains(System.Object[] arr, System.Object item)
     {
-		foreach(Object t in arr)
+		foreach(System.Object t in arr)
         {
 			if (t == item) return true;
         }
 		return false;
+    }
+
+	public static T[] ArrayAddIfNotContains<T>(T[] arr, params T[] add)
+    {
+		List<T> list = new List<T>(arr);
+		foreach(T a in add)
+        {
+			bool succ = true;
+			foreach(T o in arr)
+            {
+				if ((System.Object)a == (System.Object)o)
+				{
+					succ = false;
+					break;
+				}
+            }
+			if (succ)
+				list.Add(a);
+        }
+		return list.ToArray();
     }
 }
