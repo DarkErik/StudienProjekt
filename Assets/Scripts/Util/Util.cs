@@ -156,4 +156,13 @@ public static class Util {
         }
 		return t;
     }
+
+	public static bool ArrayContains(Object[] arr, Object item)
+    {
+		foreach(Object t in arr)
+        {
+			if (t == item) return true;
+        }
+		return false;
+    }
 }
