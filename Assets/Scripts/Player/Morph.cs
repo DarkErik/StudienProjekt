@@ -77,7 +77,7 @@ public class Morph : MonoBehaviour
                 {
                     GameObject newPlayer = collision.gameObject.GetComponent<PowerUpObject>().PlayerObject;
                     item1.PlayerObject = newPlayer;
-                    item1Image.sprite = newPlayer.GetComponentInChildren<SpriteRenderer>().sprite;
+                    item1Image.sprite = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
                     item1Image.SetNativeSize();
                     Morphing(newPlayer);
                 }
@@ -86,7 +86,7 @@ public class Morph : MonoBehaviour
                 {
                     GameObject newPlayer = collision.gameObject.GetComponent<PowerUpObject>().PlayerObject;
                     item2.PlayerObject = newPlayer;
-                    item2Image.sprite = newPlayer.GetComponentInChildren<SpriteRenderer>().sprite;
+                    item2Image.sprite = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
                     item2Image.SetNativeSize();
                     Morphing(newPlayer);
                 }
