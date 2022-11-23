@@ -17,6 +17,8 @@ public class PlayerMovementCoilSpring : MonoBehaviour
     private float previousJumpForce;
     private Vector2 velocity = Vector2.zero;
     private bool isFacingRight;
+    private float originalMovementSmoothing;
+    private float originalWalkSpeed;
 
     void Start()
     {
@@ -25,6 +27,8 @@ public class PlayerMovementCoilSpring : MonoBehaviour
         isGrounded = false;
         isCharging = false;
         previousJumpForce = 0f;
+        originalMovementSmoothing = movementSmoothing;
+        originalWalkSpeed = walkSpeed;
     }
 
     void Update()
@@ -68,12 +72,14 @@ public class PlayerMovementCoilSpring : MonoBehaviour
     {
         if (Input.GetAxis("Jump") > 0 && !isCharging)
         {
-            movementSmoothing = 0.7f; //slower horizontal movement at charged jump
+            movementSmoothing = originalMovementSmoothing * 2;
+            walkSpeed = originalWalkSpeed / 2;
             StartCoroutine(Charging());
         }
         else if (Input.GetAxis("Jump") <= 0 && !isCharging)
         {
-            movementSmoothing = 0.15f;
+            movementSmoothing = originalMovementSmoothing;
+            walkSpeed = originalWalkSpeed;
             Jump(jumpForce);
         }
     }
