@@ -13,24 +13,28 @@ public class ButtonAndDoorHandler : MonoBehaviour
     [SerializeField] private Trigger doorClosedTrigger;
 
     [SerializeField] private bool invertButton = false;
+    [SerializeField] private bool oneTimePressOnly = false;
 
     private void Awake()
     {
         if (!invertButton)
         {
             doorOpenTrigger.performer = Util.ArrayAddIfNotContains(doorOpenTrigger.performer, openPerfomerDoor, pressPerfomerButton);
-            doorClosedTrigger.performer = Util.ArrayAddIfNotContains(doorClosedTrigger.performer, closePerfomerDoor, unpressPerfomerButton);
+            if (!oneTimePressOnly)
+                doorClosedTrigger.performer = Util.ArrayAddIfNotContains(doorClosedTrigger.performer, closePerfomerDoor, unpressPerfomerButton);
         } else
         {
             doorOpenTrigger.performer = Util.ArrayAddIfNotContains(doorOpenTrigger.performer, closePerfomerDoor, pressPerfomerButton);
-            doorClosedTrigger.performer = Util.ArrayAddIfNotContains(doorClosedTrigger.performer, openPerfomerDoor, unpressPerfomerButton);
+            if (!oneTimePressOnly)
+                doorClosedTrigger.performer = Util.ArrayAddIfNotContains(doorClosedTrigger.performer, openPerfomerDoor, unpressPerfomerButton);
             
         }
     }
 
     private void Start()
     {
-        openPerfomerDoor.OnTap(null);
+        if (invertButton)
+            openPerfomerDoor.OnTap(null);
     }
 
 }
