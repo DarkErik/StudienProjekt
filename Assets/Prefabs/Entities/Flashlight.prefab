@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953107178094071087}
   - component: {fileID: 953107178094071072}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flash_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953107178722224627}
   - component: {fileID: 953107178722224626}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flashlight_player
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 857cd07550fc0cf42b3b3c191bb0c996, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3524913931137178307}
   - component: {fileID: 8833706562159853031}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Taschenlampe_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 857cd07550fc0cf42b3b3c191bb0c996, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -292,9 +292,9 @@ GameObject:
   - component: {fileID: 425937953352973405}
   - component: {fileID: 5796525735464241014}
   - component: {fileID: 3610679109786030537}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flashlight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
