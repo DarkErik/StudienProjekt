@@ -5,11 +5,18 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance{ get; private set; }
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialgueText;
     public Animator animator;
 
     private Queue<string> sentences;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -53,7 +60,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialgueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSecondsRealtime(0.05f);
         }
     }
 
