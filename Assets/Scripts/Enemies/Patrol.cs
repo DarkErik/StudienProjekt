@@ -5,7 +5,7 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
     public bool isPatrolling; //enable/disable partolling
-    
+
     [SerializeField] private float walkSpeed; //change speed
     [SerializeField] private LayerMask groundLayer; //layer of the ground
     [SerializeField] private LayerMask wallLayer; //layer of the wall
@@ -25,9 +25,11 @@ public class Patrol : MonoBehaviour
 
     void Update()
     {
+        //patrol
         if (isPatrolling)
             Partolling();
         else
+            animator.SetFloat("Speed", 0f); //change Animator variable "Speed" to disable walking animation
             animator.SetFloat("Speed", 0f); //change Animator variable "Speed" to disable walking animation
     }
 
@@ -46,6 +48,16 @@ public class Patrol : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(walkSpeed)); //change Animator variable "Speed" to disable walking animation
     }
 
+    void DeactivatePickUp()
+    {
+        animator.SetBool("Pick", false);
+    }
+
+    void DeactivatePutDown()
+    {
+        animator.SetBool("Put", false);
+    }
+
     void ChangeDirection()
     {
         isPatrolling = false;
@@ -53,5 +65,19 @@ public class Patrol : MonoBehaviour
         walkSpeed *= -1;
         flipMultiplier *= -1;
         isPatrolling = true;
+        flip = false;
+    }
+
+    public void PickUp()
+    {
+        {
+            animator.SetBool("Pick", true); //initiate pickup animation
+            isPatrolling = false;
+        }
+    }
+public void PutDown()
+    {
+        animator.SetBool("Put", true); //initiate putdown animation
+        isPatrolling = false;
     }
 }
