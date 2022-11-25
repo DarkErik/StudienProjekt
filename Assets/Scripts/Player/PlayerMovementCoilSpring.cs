@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementCoilSpring : MonoBehaviour
+public class PlayerMovementCoilSpring : PlayerMovement
 {
     [SerializeField] private float walkSpeed;
     [SerializeField] private float jumpForce;

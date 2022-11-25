@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class PlayerMovementLantern : MonoBehaviour
+public class PlayerMovementLantern : PlayerMovement
 {
     enum LightMode
     {

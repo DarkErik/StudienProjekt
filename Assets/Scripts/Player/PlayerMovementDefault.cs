@@ -6,7 +6,7 @@ using UnityEngine;
 /// [Singelton ("instance")]
 /// The script, which controls the player movement
 /// </summary>
-public class PlayerMovementDefault : MonoBehaviour
+public class PlayerMovementDefault : PlayerMovement
 {
 	/// <summary>
 	/// Singelton
@@ -117,8 +117,10 @@ public class PlayerMovementDefault : MonoBehaviour
 	public bool dashUnlocked = false;
 
 
-	private void Awake()
+	protected virtual void Awake()
 	{
+		base.Awake();
+
 		instance = this;
 		body = GetComponent<Rigidbody2D>();
 	}
