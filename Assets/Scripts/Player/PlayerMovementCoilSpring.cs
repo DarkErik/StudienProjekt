@@ -95,32 +95,38 @@ public class PlayerMovementCoilSpring : MonoBehaviour
         animator.SetBool("IsJumping", true); //enable jumping animation with Animator variable "isJumping"
     }
 
-    //charrging process for charged jump
+    //charging process for charged jump
     private IEnumerator Charging()
     {
+        
         isCharging = true;
         animator.SetBool("IsCharging", true); //enable charging animation with Animator variable "IsCharging"
 
         float multiplier = 1f;
         while (Input.GetAxis("Jump") > 0)
         {
-            multiplier += 0.2f;
+            //change color to red while charging
+            GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, Color.red, 0.1f);
+
+            multiplier += 0.4f;
             yield return new WaitForSeconds(0.1f);
         }
-        multiplier = Mathf.Min(multiplier, 3.5f);
+        multiplier = Mathf.Min(multiplier, 3.6f);
         animator.SetBool("IsCharging", false); //disable charging animation with Animator variable "IsCharging"
         Jump(jumpForce * multiplier);
+
+        //change color to white when releasing charge
+        GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 
     //horizontal movement
     private void Walk()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-
-        if (horizontalInput < 0 && isFacingRight)
-            Flip(-1);
-        if (horizontalInput > 0 && !isFacingRight)
-            Flip(1);
+        if (horizontalInput < 0 && isFacingRight) { }
+            //Flip(-1);
+        if (horizontalInput > 0 && !isFacingRight) { }
+            //Flip(1);
 
         Vector2 targetVelocity = new Vector2(horizontalInput * walkSpeed, rb.velocity.y);
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothing); //smooth movement

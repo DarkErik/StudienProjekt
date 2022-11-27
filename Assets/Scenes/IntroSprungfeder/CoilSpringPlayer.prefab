@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 857cd07550fc0cf42b3b3c191bb0c996, type: 2}
+  - {fileID: 2100000, guid: aac580f92fd846e459b0b9730e952055, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 46be38b0c69d77d48a66f1dbb7fa8543, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cc6ccd4a46a4164ca71cda3c6d5175d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 8013285883771388430}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 368ac066ebd5c8341b53ec1220c27f68, type: 2}
+  m_Controller: {fileID: 9100000, guid: 380ffb08cc94212489968692a92d63d9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065733cbae3bfca4d9b5a261e78f95ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayer: {fileID: 1655810662089520957, guid: 2533c132a1ccb7841b4f852ed2a42397, type: 3}
+  defaultPlayer: {fileID: 1655810662089520957, guid: 4c545ba2aff6d134891d15f9ed6bb65c, type: 3}
 --- !u!50 &8013285885023592989
 Rigidbody2D:
   serializedVersion: 4
