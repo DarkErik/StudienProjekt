@@ -12,8 +12,12 @@ public class CanvasActivate : MonoBehaviour
     [SerializeField] Image itemOverlayBackground;
     [SerializeField] Image itemOverlayItem1;
     [SerializeField] Image itemOverlayItem2;
+    [SerializeField] Image itemBackgroundItem1;
+    [SerializeField] Image itemBackgroundItem2;
     [SerializeField] TextMeshProUGUI itemOverlayItem1Text;
     [SerializeField] TextMeshProUGUI itemOverlayItem2Text;
+    [SerializeField] Image itemBackgroundItem1Text;
+    [SerializeField] Image itemBackgroundItem2Text;
 
     void Update()
     {
@@ -32,6 +36,10 @@ public class CanvasActivate : MonoBehaviour
                 itemOverlayItem2.enabled = true;
                 itemOverlayItem1Text.enabled = true;
                 itemOverlayItem2Text.enabled = true;
+                itemBackgroundItem1.enabled = true;
+                itemBackgroundItem2.enabled = true;
+                itemBackgroundItem1Text.enabled = true;
+                itemBackgroundItem2Text.enabled = true;
             } 
         }
         else
@@ -41,6 +49,10 @@ public class CanvasActivate : MonoBehaviour
             itemOverlayItem2.enabled = false;
             itemOverlayItem1Text.enabled = false;
             itemOverlayItem2Text.enabled = false;
+            itemBackgroundItem1.enabled = false;
+            itemBackgroundItem2.enabled = false;
+            itemBackgroundItem1Text.enabled = false;
+            itemBackgroundItem2Text.enabled = false;
         }
     }
 
