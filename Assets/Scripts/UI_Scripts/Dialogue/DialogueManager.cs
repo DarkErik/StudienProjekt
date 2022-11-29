@@ -16,6 +16,12 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("space") && animator.GetBool("IsOpen"))
+            DisplayNextSentence();
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
