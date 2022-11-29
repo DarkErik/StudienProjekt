@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementUmbrella : MonoBehaviour
+public class PlayerMovementUmbrella : PlayerMovement
 {
     [SerializeField] private float glideSpeedHorizonal;
     [SerializeField] private float glideSpeedVertical;

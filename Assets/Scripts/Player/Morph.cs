@@ -44,14 +44,14 @@ public class Morph : MonoBehaviour
     {
         if (itemSlot1 == null)
         {
-            itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1");
+            itemSlot1 = GameObject.Find("/Manager/MainCanvas/ItemOverlay/Item1");
             item1 = itemSlot1.GetComponent<PowerUpObject>();
             item1Image = itemSlot1.GetComponent<Image>();
         }
 
         if (itemSlot2 == null)
         {
-            itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2");
+            itemSlot2 = GameObject.Find("/Manager/MainCanvas/ItemOverlay/Item2");
             item2 = itemSlot2.GetComponent<PowerUpObject>();
             item2Image = itemSlot2.GetComponent<Image>();
         }

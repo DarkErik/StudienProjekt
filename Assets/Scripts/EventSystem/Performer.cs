@@ -12,10 +12,17 @@ public abstract class Performer : Trigger
         if (isTriggered)
         {
             OnUpdate();
+        } else
+        {
+            OnUpdateFalse();
         }
     }
 
     protected abstract void OnUpdate();
+    protected virtual void OnUpdateFalse()
+    {
+    }
+
     public abstract void OnTap(Trigger triggerData);
 
     public virtual void SetTrigger(bool trigger, Trigger triggerData)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementFan : MonoBehaviour
+public class PlayerMovementFan : PlayerMovement
 {
     enum Mode
     {
