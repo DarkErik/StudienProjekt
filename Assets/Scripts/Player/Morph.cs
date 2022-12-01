@@ -23,8 +23,8 @@ public class Morph : MonoBehaviour
         canMorph = false;
         inCollider = false;
 
-        itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1");
-        itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2");
+        itemSlot1 = GameObject.Find("/MainCanvas/ItemOverlay/Item1Background/Item1");
+        itemSlot2 = GameObject.Find("/MainCanvas/ItemOverlay/Item2Background/Item2");
 
         if (itemSlot1 != null)
         {

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TiggerOperation : Performer
+public class TriggerOperation : Performer
 {
 
     [SerializeField] private OperationType operationType;
     [SerializeField] private Trigger[] trigger;
-    [SerializeField] private Performer[] performers;
+    //[SerializeField] private Performer[] performers;
 
     private bool[] triggerStateArr;
 
@@ -16,9 +16,9 @@ public class TiggerOperation : Performer
     {
         foreach(Trigger t in trigger)
         {
-            if (!Util.ArrayContains(trigger, t))
+            if (!Util.ArrayContains(t.performer, this))
             {
-                Util.AppendArray(trigger, t);
+                t.performer = Util.AppendArray(t.performer, this);
             }
         }
 

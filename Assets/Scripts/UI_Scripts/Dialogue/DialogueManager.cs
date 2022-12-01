@@ -5,19 +5,39 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance{ get; private set; }
+    private static Dialogue currentDialogue = null;
+    
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialgueText;
     public Animator animator;
 
     private Queue<string> sentences;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         sentences = new Queue<string>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("space") && animator.GetBool("IsOpen"))
+            DisplayNextSentence();
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
+        if(currentDialogue == dialogue) return;
+
+        PlayerMovement.Shutdown();
+        currentDialogue = dialogue;
+
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
@@ -37,6 +57,8 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             animator.SetBool("IsOpen", false);
+            currentDialogue = null;
+            PlayerMovement.WakeUp();
             return;
         }
 
@@ -53,7 +75,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialgueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSecondsRealtime(0.05f);
         }
     }
 
