@@ -151,6 +151,8 @@ GameObject:
   - component: {fileID: 8013285885023592989}
   - component: {fileID: 8013285885023592988}
   - component: {fileID: -2923173914740406817}
+  - component: {fileID: 1297309724890136438}
+  - component: {fileID: 3387599972121096488}
   m_Layer: 3
   m_Name: CoilSpringPlayer
   m_TagString: Player
@@ -281,3 +283,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uuid: 1
+--- !u!68 &1297309724890136438
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013285885023592963}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 1e8da3c5e83ca084c8b0e496a710540a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.502038, y: 0.91892004}
+  - {x: -0.502583, y: -0.7309216}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &3387599972121096488
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013285885023592963}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 1e8da3c5e83ca084c8b0e496a710540a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.44386482, y: 0.91938204}
+  - {x: 0.44346523, y: -0.7313124}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
