@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655810662089520957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7, y: -3.643, z: 0.08739089}
+  m_LocalPosition: {x: 5.7, y: -3.643, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -80,6 +80,7 @@ MonoBehaviour:
   wallJumpDir: {x: 0, y: 0}
   groundCheck: {fileID: 1655810662805659655}
   wallCheck: {fileID: 7995551635472195462}
+  animator: {fileID: 1655810662089520930}
   partikelSystem: {fileID: 1364101099621881197}
   dashUnlocked: 0
 --- !u!114 &1655810662089520934

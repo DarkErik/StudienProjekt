@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 5796525735464241014}
   - component: {fileID: 3610679109786030537}
   m_Layer: 3
-  m_Name: Flashlight
+  m_Name: FlashlightPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

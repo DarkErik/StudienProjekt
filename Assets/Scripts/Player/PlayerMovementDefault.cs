@@ -99,7 +99,8 @@ public class PlayerMovementDefault : PlayerMovement
 	public Transform wallCheck;
 
 	private Rigidbody2D body;
-	private Animator animator;
+
+	[SerializeField] Animator animator;
 
 	private float dashEndTime = 0f;
 	private float nextDashEyeCandy = 0f;
@@ -127,7 +128,6 @@ public class PlayerMovementDefault : PlayerMovement
 
 	private void Start()
 	{
-		animator = GetComponent<Animator>();
 		amountOfJumpsLeft = amountOfJumps;
 		wallJumpDir.Normalize();
 		if (wallJumpDir.x > 0) wallJumpDir.x = -wallJumpDir.x;

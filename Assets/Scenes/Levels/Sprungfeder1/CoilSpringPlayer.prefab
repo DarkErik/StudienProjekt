@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 857cd07550fc0cf42b3b3c191bb0c996, type: 2}
+  - {fileID: 2100000, guid: 3318ac850f8207f41abdc1e9ef673f84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 46be38b0c69d77d48a66f1dbb7fa8543, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 811d75266c4316e448e4ff08f4b6d4a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 8013285883771388430}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 368ac066ebd5c8341b53ec1220c27f68, type: 2}
+  m_Controller: {fileID: 9100000, guid: ec479603cda6ea6419c8672e243d8848, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -151,8 +151,6 @@ GameObject:
   - component: {fileID: 8013285885023592989}
   - component: {fileID: 8013285885023592988}
   - component: {fileID: -2923173914740406817}
-  - component: {fileID: 1297309724890136438}
-  - component: {fileID: 3387599972121096488}
   m_Layer: 3
   m_Name: CoilSpringPlayer
   m_TagString: Player
@@ -189,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfc88766d7678f4cbeeb9d1f92ca8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
+  walkSpeed: 3
   jumpForce: 2.5
   movementSmoothing: 0.15
   groundLayer:
@@ -222,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065733cbae3bfca4d9b5a261e78f95ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPlayer: {fileID: 1655810662089520957, guid: 2533c132a1ccb7841b4f852ed2a42397, type: 3}
+  defaultPlayer: {fileID: 1655810662089520957, guid: eb902de6558e7da488aae712b8a9a0c2, type: 3}
 --- !u!50 &8013285885023592989
 Rigidbody2D:
   serializedVersion: 4
@@ -239,7 +237,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6ac9e231a2e387e4c8e4b96883f2a680, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -283,47 +281,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uuid: 1
---- !u!68 &1297309724890136438
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8013285885023592963}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1e8da3c5e83ca084c8b0e496a710540a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.502038, y: 0.91892004}
-  - {x: -0.502583, y: -0.7309216}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!68 &3387599972121096488
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8013285885023592963}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1e8da3c5e83ca084c8b0e496a710540a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.44386482, y: 0.91938204}
-  - {x: 0.44346523, y: -0.7313124}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
