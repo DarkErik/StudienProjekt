@@ -108,7 +108,7 @@ public class PlayerMovementDefault : PlayerMovement
 	private Vector3 normalizedDashDirection = default;
 	private float gravityValueStorageDuringDash;
 
-	[SerializeField] private ParticleSystem partikelSystem;
+	[SerializeField] private ParticleSystem particleSystem;
 
 	private string jumpButton = "Jump";
 	private string dashButton = "Dash";
@@ -392,7 +392,7 @@ public class PlayerMovementDefault : PlayerMovement
 
 	private void UpdatePartikleSystem()
 	{
-		ParticleSystem.EmissionModule emission = partikelSystem.emission;
+		ParticleSystem.EmissionModule emission = particleSystem.emission;
 
 		if (isWallSliding || isGrounded)
 		{
