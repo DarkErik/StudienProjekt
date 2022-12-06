@@ -15,6 +15,7 @@ public class PlayerMovementLantern : PlayerMovement
     public Light2D spotLight;
     public Material lanternGreenMaterial;
     public Material lanternRedMaterial;
+    public AudioSource audioChangeMode;
 
     private float timer;
     private bool canChangeMode;
@@ -44,6 +45,8 @@ public class PlayerMovementLantern : PlayerMovement
         {
             canChangeMode = false;
             timer = 0;
+
+            audioChangeMode.Play();
 
             int currentModeInt = ((int)currentMode + 1) % 3;
             currentMode = (LightMode)currentModeInt;
