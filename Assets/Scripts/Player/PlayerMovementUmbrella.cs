@@ -12,6 +12,9 @@ public class PlayerMovementUmbrella : PlayerMovement
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource audioGlide;
+    [SerializeField] private AudioSource audioOpen;
+    [SerializeField] private AudioSource audioClose;
 
     private bool isGrounded;
     private bool hasDoubleJump;
@@ -59,6 +62,10 @@ public class PlayerMovementUmbrella : PlayerMovement
         hasDoubleJump = true;
         rb.gravityScale = defaultGravityScale;
         animator.SetBool("IsJumping", false); //disable jumping animation with Animator variable "isJumping"
+        audioGlide.Stop();
+        audioOpen.Stop();
+        if(!audioClose.isPlaying)
+            audioClose.Play();
     }
 
     //horizontal movement
@@ -100,9 +107,16 @@ public class PlayerMovementUmbrella : PlayerMovement
             if (!isGrounded)
                 hasDoubleJump = false;
 
+            if (isGrounded)
+            {
+                audioClose.Stop();
+                audioOpen.Play();
+            }
+
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             
             animator.SetBool("IsJumping", true); //enable jumping animation with Animator variable "isJumping"
+            audioGlide.Play();
         }
     }
 }
