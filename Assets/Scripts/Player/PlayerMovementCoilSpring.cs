@@ -11,6 +11,8 @@ public class PlayerMovementCoilSpring : PlayerMovement
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource audioJump;
+    [SerializeField] private AudioSource audioCharge;
 
     private bool isGrounded;
     private bool isCharging;
@@ -51,6 +53,9 @@ public class PlayerMovementCoilSpring : PlayerMovement
             if (!wasGrounded)
                 OnLand();
         }
+
+        if (isGrounded)
+            rb.velocity = new Vector2(0f, rb.velocity.y);
     }
 
     //called once when player lands
@@ -58,6 +63,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
     {
         isCharging = false;
         animator.SetBool("IsJumping", false); //disable jumping animation with Animator variable "isJumping"
+        audioJump.Stop();
         StartCoroutine(wait());
     }
 
@@ -93,6 +99,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
 
         rb.velocity = new Vector2(0f, jumpForce);
         animator.SetBool("IsJumping", true); //enable jumping animation with Animator variable "isJumping"
+        audioJump.Play();
     }
 
     //charging process for charged jump
@@ -101,6 +108,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
         
         isCharging = true;
         animator.SetBool("IsCharging", true); //enable charging animation with Animator variable "IsCharging"
+        audioCharge.Play();
 
         float multiplier = 1f;
         while (Input.GetAxis("Jump") > 0)
@@ -113,6 +121,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
         }
         multiplier = Mathf.Min(multiplier, 3.6f);
         animator.SetBool("IsCharging", false); //disable charging animation with Animator variable "IsCharging"
+        audioCharge.Stop();
         Jump(jumpForce * multiplier);
 
         //change color to white when releasing charge
