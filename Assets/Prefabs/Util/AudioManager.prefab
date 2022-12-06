@@ -44,4 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d3aab88d7c72c45a88c388cdd6d3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Morph
+    clip: {fileID: 8300000, guid: 884349bf171bc9741870aa52aea2b598, type: 3}
+    loop: 0
+    volume: 0.175
+    pitch: 1
+    source: {fileID: 0}
+  - name: Demorph
+    clip: {fileID: 8300000, guid: 7f70f9d73659ebc48911a40d1258912e, type: 3}
+    loop: 0
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}

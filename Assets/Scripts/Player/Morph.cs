@@ -120,6 +120,7 @@ public class Morph : MonoBehaviour
 
     private void Morphing(GameObject newPlayer)
     {
+        AudioManager.instance.Play("Morph");
         DisableOldPlayer(gameObject);
         GameObject newPlayerObject = Instantiate(newPlayer, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.3f, gameObject.transform.position.z), Quaternion.identity);
         StartCoroutine(FadeIn(newPlayerObject));
