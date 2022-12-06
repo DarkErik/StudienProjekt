@@ -12,6 +12,7 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private TextMeshProUGUI coinText;
     [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private AudioSource audioCollect;
     [SerializeField] private Camera cam;
     private int currentCoins;
     private float fontSizeOrigin;
@@ -30,6 +31,7 @@ public class CoinCounter : MonoBehaviour
 
     public void StartMovement(Vector3 initialPos, Action onComplete)
     {
+        audioCollect.Play();
         GameObject coin = Instantiate(coinPrefab, transform);
         StartCoroutine(MoveCoin(coin.transform, initialPos, onComplete));
     }
