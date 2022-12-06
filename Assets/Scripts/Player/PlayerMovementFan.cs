@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementFan : PlayerMovement
+public class PlayerMovementFan : MonoBehaviour
 {
     enum Mode
     {
@@ -18,12 +18,16 @@ public class PlayerMovementFan : PlayerMovement
     [SerializeField] private AreaEffector2D areaEffector;
     [SerializeField] private GameObject particles;
     [SerializeField] private GameObject windZone;
+    [SerializeField] private AudioSource audioIdle;
+    [SerializeField] private AudioSource audioWalk;
+    [SerializeField] private AudioSource audioWind;
 
     private bool isFacingRight;
     private float timer;
     private bool canChangeMode;
     private Vector2 velocity = Vector2.zero;
     private Mode currentMode;
+    private float lastSpeed;
 
 
     void Start()
@@ -33,12 +37,14 @@ public class PlayerMovementFan : PlayerMovement
         timer = 0f;
         currentMode = Mode.Off;
         OffMode();
+        lastSpeed = 0f;
+        audioIdle.Play();
     }
 
     void Update()
     {
         Walk();
-        
+
         if (!canChangeMode) //ability can be toggled every 0.5 seconds
             canChangeMode = 0.5f < (timer += Time.deltaTime);
         else
@@ -59,6 +65,20 @@ public class PlayerMovementFan : PlayerMovement
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothing); //smooth movement
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalInput)); //enable or disable walking animation with Animator variable "Speed"
+
+        if (Mathf.Abs(horizontalInput) > 0 && lastSpeed <= 0)
+        {
+            audioIdle.Stop();
+            audioWalk.Play();
+        }
+
+        if (Mathf.Abs(horizontalInput) <= 0 && lastSpeed > 0)
+        {
+            audioWalk.Stop();
+            audioIdle.Play();
+        }
+
+        lastSpeed = Mathf.Abs(horizontalInput);
     }
 
     //change facing direction to movement direction
@@ -108,7 +128,7 @@ public class PlayerMovementFan : PlayerMovement
                     break;
                 default:
                     break;
-            }     
+            }
         }
     }
 
@@ -116,12 +136,15 @@ public class PlayerMovementFan : PlayerMovement
     {
         windZone.SetActive(false);
         animator.SetInteger("Mode", 0);
+        audioWind.Stop();
     }
 
     private void ForwardMode()
     {
         windZone.SetActive(true);
         animator.SetInteger("Mode", 1);
+        audioWind.Stop();
+        audioWind.Play();
 
         if (isFacingRight)
         {
@@ -139,6 +162,8 @@ public class PlayerMovementFan : PlayerMovement
     {
         windZone.SetActive(true);
         animator.SetInteger("Mode", 2);
+        audioWind.Stop();
+        audioWind.Play();
 
         if (isFacingRight)
         {
