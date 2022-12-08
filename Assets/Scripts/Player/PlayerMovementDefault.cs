@@ -415,10 +415,12 @@ public class PlayerMovementDefault : PlayerMovement
 		if (isGrounded && body.velocity.y <= 0)
 		{
 			amountOfJumpsLeft = amountOfJumps;
+			canJump = true;
 			canDash = true;
 		}
 
 		canJump = amountOfJumpsLeft > 0;
+		
 	}
 
 	private void OnDrawGizmos()
