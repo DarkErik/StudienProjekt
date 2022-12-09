@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &7220198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5475483891497271336, guid: 8ee8cef2f083d914b9f0009c31e2a33e, type: 3}
+  m_PrefabInstance: {fileID: 3509265206510753352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d3aab88d7c72c45a88c388cdd6d3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &17854062
 GameObject:
   m_ObjectHideFlags: 0
@@ -11560,9 +11571,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1673967613}
+    - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7220198}
+    - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: ButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971551045146995512, guid: c2b7194850b259344b61756d11e8274e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b7194850b259344b61756d11e8274e, type: 3}
 --- !u!1001 &2293501059574852074

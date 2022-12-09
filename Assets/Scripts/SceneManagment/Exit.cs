@@ -58,6 +58,7 @@ public class Exit : MonoBehaviour {
 			Time.timeScale = 0f;
 			PlayerData.instance.UpdateCurrentData();
 			exitSpawnName = destinationExitName;
+			AudioManager.instance.Play("SceneTransition");
 			SceneTransition.LoadScene(scene.name, dir);
 		}
 	}
