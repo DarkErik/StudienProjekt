@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine.Audio;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public Sound[] sounds;
+    private string currentBGM;
 
     void Awake()
     {
@@ -33,7 +35,8 @@ public class AudioManager : MonoBehaviour
     
     void Start()
     {
-        //insert background music
+        Play("BGM1");
+        currentBGM = "BGM1";
     }
 
     public void Play(string name)
@@ -67,6 +70,45 @@ public class AudioManager : MonoBehaviour
             return;
         }
         sound.source.Stop();
+    }
+
+    public void ChangeBackgroundMusic(string newTrack)
+    {
+        instance.ChangeBackgroundMusic(newTrack);
+    }
+
+    private void ChangeBackgroundMusicLogic(string newTrack)
+    {
+        if (!newTrack.Equals(currentBGM))
+            StartCoroutine(FadeTracks(newTrack));
+    }
+
+    private IEnumerator FadeTracks(string newTrack)
+    {
+        float timeToFade = 1.25f;
+        float timer = 0f;
+
+        Sound currentSound = Array.Find(sounds, (sound) => sound.name == currentBGM);
+        Sound newSound = Array.Find(sounds, (sound) => sound.name == newTrack);
+        if (newSound == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found");
+            yield break;
+        }
+
+        currentBGM = newTrack;
+        newSound.source.Play();
+
+        while (timer < timeToFade)
+        {
+            newSound.source.volume = Mathf.Lerp(0, 1, timer / timeToFade);
+            currentSound.source.volume = Mathf.Lerp(1, 0, timer / timeToFade);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        newSound.source.volume = 1f;
+        currentSound.source.volume = 0f;
     }
 
     public void ChangeClip(string name, AudioClip clip)

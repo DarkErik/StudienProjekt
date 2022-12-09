@@ -73,3 +73,52 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: BGM1
+    clip: {fileID: 8300000, guid: 343b327a8d72dff4aa2eb17b5cadcaea, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BGM2
+    clip: {fileID: 8300000, guid: 351d8c9bfb5663e4eaf57f7f6b6bf114, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BGM3
+    clip: {fileID: 8300000, guid: 1962c6bb18614ad41a3b641de26bf92a, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ScienceBGM1
+    clip: {fileID: 8300000, guid: f53c87d104419e0449d38a998578134b, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ScienceBGM2
+    clip: {fileID: 8300000, guid: 055c45d594b88a644bbed54a20bfee51, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: DarkScienceBGM
+    clip: {fileID: 8300000, guid: b8708a0a0aaa08d4fa2ddf9e297c662b, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: DialogueBGM
+    clip: {fileID: 8300000, guid: eab57e7ca958d094f88264b2e7b0050d, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
