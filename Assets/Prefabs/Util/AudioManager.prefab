@@ -47,12 +47,14 @@ MonoBehaviour:
   sounds:
   - name: Morph
     clip: {fileID: 8300000, guid: 884349bf171bc9741870aa52aea2b598, type: 3}
+    output: {fileID: -5045297731924226733, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
     loop: 0
     volume: 0.175
     pitch: 1
     source: {fileID: 0}
   - name: Demorph
     clip: {fileID: 8300000, guid: 7f70f9d73659ebc48911a40d1258912e, type: 3}
+    output: {fileID: -5045297731924226733, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
     loop: 0
     volume: 0.8
     pitch: 1
