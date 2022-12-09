@@ -7,13 +7,12 @@ public class Flashlight : MonoBehaviour
     public GameObject scientist; //scientist that picks up flashlight
 
     [SerializeField] GameObject lightning;
+    public AudioSource audioChangeMode;
 
     private bool isBright = false; //signals if the flashlight is on
     private bool isFlashlight = false; //signals if the flashlight is ready to be turned on
     private float flash; //input
     private bool isPickUp = false; //signals if the flashlight is currently picked up
-    
-
 
     void Update()
     {
@@ -26,6 +25,7 @@ public class Flashlight : MonoBehaviour
                 isBright = !isBright;
                 lightning.SetActive(isBright);
                 isFlashlight = false;
+                audioChangeMode.Play();
             }
         }
         if (flash == 0)
