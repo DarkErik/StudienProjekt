@@ -59,3 +59,17 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     source: {fileID: 0}
+  - name: SceneTransition
+    clip: {fileID: 8300000, guid: 5a5fe3ca5e25e124aac7b34e7000d268, type: 3}
+    output: {fileID: -5045297731924226733, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 0.75
+    pitch: 1
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: 07dcb2537e315a942968129f35cad96a, type: 3}
+    output: {fileID: -5045297731924226733, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
