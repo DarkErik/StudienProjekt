@@ -80,7 +80,8 @@ MonoBehaviour:
   wallJumpDir: {x: 0, y: 0}
   groundCheck: {fileID: 1655810662805659655}
   wallCheck: {fileID: 7995551635472195462}
-  partikelSystem: {fileID: 1364101099621881197}
+  animator: {fileID: 1655810662089520930}
+  particleSystem: {fileID: 1364101099621881197}
   dashUnlocked: 0
 --- !u!114 &1655810662089520934
 MonoBehaviour:
