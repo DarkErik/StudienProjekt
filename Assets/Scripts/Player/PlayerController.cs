@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
         CameraController.SetFollowTarget(transform);
     }
 
