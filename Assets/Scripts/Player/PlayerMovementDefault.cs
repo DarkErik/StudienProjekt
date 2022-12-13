@@ -87,6 +87,7 @@ public class PlayerMovementDefault : PlayerMovement
 	private bool isLookingUp = false;
 	private bool isDucking = false;
 	private bool isGrounded = false, canJump = false;
+	private bool isFalling = false;
 	private bool isTouchingWall = false;
 	private bool isWallSliding = false;
 	private bool isDashing = false;
@@ -350,7 +351,6 @@ public class PlayerMovementDefault : PlayerMovement
 			body.velocity = new Vector2(wallJumpDir.x * wallJumpForce * dir, wallJumpDir.y * wallJumpForce);
 			moveBlockDelay = controlBlockDelayWallJump;
 			jumpPressed = false;
-
 			//SOUND SoundManager.PlaySound(Sound.PLAYER_JUMP, true);
 		}
 
@@ -359,7 +359,6 @@ public class PlayerMovementDefault : PlayerMovement
 			body.velocity = new Vector2(body.velocity.x, jumpForce);
 			jumpPressed = false;
 			amountOfJumpsLeft--;
-
 			//SOUND SoundManager.PlaySound(Sound.PLAYER_JUMP, true);
 		}
 
@@ -371,6 +370,14 @@ public class PlayerMovementDefault : PlayerMovement
 		}
 
 
+		if(!isGrounded && body.velocity.y < 0)
+        {
+			isFalling = true;
+        }
+        else 
+		{ 
+			isFalling = false;
+		}
 	}
 
 	private void UpdateAnimations()
@@ -380,6 +387,7 @@ public class PlayerMovementDefault : PlayerMovement
 		animator.SetBool("isWallSliding", isWallSliding);
 		animator.SetBool("isLookingUp", isLookingUp);
 		animator.SetBool("isDucking", isDucking);
+		animator.SetBool("isFalling", isFalling);
 	}
 
 	private void Flip()

@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     {
         CameraController.SetFollowTarget(transform);
     }
-
     public int getUUID()
     {
         return uuid;
