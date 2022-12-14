@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SetFlagPerfomer : Performer
 {
-    [SerializeField] private string flagName = "name";
+    [SerializeField] public string flagName = "name";
     [SerializeField] private bool unsetFlag = false;
 
     public override void OnTap(Trigger triggerData)
     {
+        Debug.Log("SET: " + flagName);
         if (unsetFlag)
         {
             PlayerData.instance.RemoveFlag(flagName);

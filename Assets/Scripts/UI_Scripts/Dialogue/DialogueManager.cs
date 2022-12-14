@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    private bool setFlagOnFinish = false;
+
     private void Awake()
     {
         Instance = this;
@@ -31,10 +33,11 @@ public class DialogueManager : MonoBehaviour
             DisplayNextSentence();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, bool setFlagOnFinish = false)
     {
         if(currentDialogue == dialogue) return;
 
+        this.setFlagOnFinish = setFlagOnFinish;
         PlayerMovement.Shutdown();
         currentDialogue = dialogue;
 
@@ -57,6 +60,12 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             animator.SetBool("IsOpen", false);
+
+            if (setFlagOnFinish)
+                PlayerData.instance.SetFlag(DialogPerformer.DIALOGUE_FLAG_PREFIX + currentDialogue.id);
+            
+            Debug.Log(DialogPerformer.DIALOGUE_FLAG_PREFIX + currentDialogue.id + " " + setFlagOnFinish);
+
             currentDialogue = null;
             PlayerMovement.WakeUp();
             return;
