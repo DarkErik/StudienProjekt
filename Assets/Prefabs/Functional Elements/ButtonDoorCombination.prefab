@@ -495,6 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4104456869523639041}
   - component: {fileID: 4104456869523639042}
+  - component: {fileID: 3623856749265553013}
   m_Layer: 0
   m_Name: ButtonDoorCombination
   m_TagString: Untagged
@@ -535,7 +536,25 @@ MonoBehaviour:
   closePerfomerDoor: {fileID: 4104456869211084136}
   pressPerfomerButton: {fileID: 4104456868655952500}
   unpressPerfomerButton: {fileID: 4104456868655952499}
+  setFlagPerformer: {fileID: 3623856749265553013}
   doorOpenTrigger: {fileID: 4104456868655952498}
   doorClosedTrigger: {fileID: 4104456868655952497}
   invertButton: 0
   oneTimePressOnly: 0
+  savePressAsFlag: 0
+  flagName: name
+--- !u!114 &3623856749265553013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104456869523639040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88760bf7c573fa546abe421b04a4a7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  performer: []
+  flagName: name
+  unsetFlag: 0
