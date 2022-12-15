@@ -1231,7 +1231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[7]
-      value: They know no mercy; they fear no man. If you can, keep you distance.
+      value: For they know no mercy; they fear no man. If you can, keep your distance.
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[8]
@@ -1287,20 +1287,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[10]
-      value: "Your na\xEFve I say. They won\u2019t let you. Once you leave the basements
-        true horrors will await you."
+      value: "You're na\xEFve, I say. They won\u2019t let you. Once you leave the
+        basements true horrors will await you."
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[11]
-      value: To be fair, it is long since I visited the upper levels, very long.
+      value: To be fair, it has been long since I visited the upper levels, very
+        long.
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[12]
-      value: Here, take this keycard, I once stole. It will open the green Door.
+      value: Here, take this keycard I once stole. It will open the green door.
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[13]
-      value: Good luck, fella; you will need it!
+      value: Good luck, fella... you will need it!
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[10]
@@ -34720,7 +34721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8762661036324130313, guid: 7411787b37f05094e809d4f2896d4002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.042275
+      value: 3.0579603
       objectReference: {fileID: 0}
     - target: {fileID: 8762661036324130313, guid: 7411787b37f05094e809d4f2896d4002, type: 3}
       propertyPath: m_LocalPosition.y
