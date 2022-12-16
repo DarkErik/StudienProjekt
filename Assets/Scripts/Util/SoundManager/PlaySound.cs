@@ -10,6 +10,9 @@ public class PlaySound : MonoBehaviour
     void Update()
     {
         if (play)
+        {
+            audioSource.Stop();
             audioSource.Play();
+        }
     }
 }
