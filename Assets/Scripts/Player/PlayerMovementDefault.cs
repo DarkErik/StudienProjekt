@@ -79,6 +79,10 @@ public class PlayerMovementDefault : PlayerMovement
 	/// </summary>
 	public Vector2 wallJumpDir;
 
+	public AudioSource jumpAudio;
+	public AudioSource duckAudio;
+	public AudioSource wallSlideAudio;
+
 	private int amountOfJumpsLeft;
 
 	private bool facingRight = true;
@@ -328,6 +332,7 @@ public class PlayerMovementDefault : PlayerMovement
 		}
 		else
 		{
+			bool prevDucking = isDucking;
 			isWalking = false;
 			isLookingUp = false;
 			isDucking = false;
@@ -339,6 +344,8 @@ public class PlayerMovementDefault : PlayerMovement
 			else if (verticalInput < 0)
 			{
 				isDucking = true;
+				if (!prevDucking)
+					duckAudio.Play();
 			}
 		}
 	}
@@ -351,7 +358,8 @@ public class PlayerMovementDefault : PlayerMovement
 			body.velocity = new Vector2(wallJumpDir.x * wallJumpForce * dir, wallJumpDir.y * wallJumpForce);
 			moveBlockDelay = controlBlockDelayWallJump;
 			jumpPressed = false;
-			//SOUND SoundManager.PlaySound(Sound.PLAYER_JUMP, true);
+			//jumpAudio.Stop();
+			//jumpAudio.Play();
 		}
 
 		if (jumpPressed && canJump)
@@ -359,7 +367,8 @@ public class PlayerMovementDefault : PlayerMovement
 			body.velocity = new Vector2(body.velocity.x, jumpForce);
 			jumpPressed = false;
 			amountOfJumpsLeft--;
-			//SOUND SoundManager.PlaySound(Sound.PLAYER_JUMP, true);
+			jumpAudio.Stop();
+			jumpAudio.Play();
 		}
 
 
@@ -415,7 +424,13 @@ public class PlayerMovementDefault : PlayerMovement
 
 	private void CheckIfWallSliding()
 	{
+		bool prevWallSliding = isWallSliding;
 		isWallSliding = !isGrounded && isTouchingWall && body.velocity.y <= 0 && (horizontalInput > 0 == facingRight);
+
+		if (!prevWallSliding && isWallSliding)
+			wallSlideAudio.Play();
+		if (!isWallSliding)
+			wallSlideAudio.Stop();
 	}
 
 	private void CheckCanJump()
