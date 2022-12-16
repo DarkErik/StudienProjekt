@@ -425,7 +425,7 @@ public class PlayerMovementDefault : PlayerMovement
 			amountOfJumpsLeft = amountOfJumps;
 			canJump = true;
 			canDash = true;
-		}
+        }
 
 		canJump = amountOfJumpsLeft > 0;
 		
