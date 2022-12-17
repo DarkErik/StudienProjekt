@@ -411,14 +411,17 @@ public class PlayerMovementDefault : PlayerMovement
 	{
 		ParticleSystem.EmissionModule emission = particleSystem.emission;
 
-		if (isWallSliding || isGrounded)
+		if (isWallSliding || (isGrounded && isWalking))
 		{
 			if (!emission.enabled) emission.enabled = true;
+			//Debug.Log(particleSystem.emission.enabled);
 		}
 		else
 		{
+			//Debug.Log(particleSystem.emission.enabled);
 			if (emission.enabled) emission.enabled = false;
 		}
+
 	}
 
 
