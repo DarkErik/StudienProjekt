@@ -420,12 +420,15 @@ public class PlayerMovementDefault : PlayerMovement
 
 	private void CheckCanJump()
 	{
-		if (isGrounded && body.velocity.y <= 0)
+		if (isGrounded && Mathf.Abs(body.velocity.y) <= 0.1f)
 		{
 			amountOfJumpsLeft = amountOfJumps;
 			canJump = true;
 			canDash = true;
-		}
+		} else
+        {
+			amountOfJumpsLeft = 0; //TODO fix this someday
+        }
 
 		canJump = amountOfJumpsLeft > 0;
 		
@@ -441,7 +444,7 @@ public class PlayerMovementDefault : PlayerMovement
 	/// <summary>
 	/// Shuts down the behaivour, until it will be woken up (WakeUp)
 	/// </summary>
-	public static void Shutdown()
+	public static new void Shutdown()
 	{
 		_Shutdown();
 	}
