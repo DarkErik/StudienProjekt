@@ -21,4 +21,20 @@ public class BindPlayerToMovingPlatform : MonoBehaviour
             plat.player = null;
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D c)
+    {
+        if (PlayerController.IsPlayer(c.gameObject))
+        {
+            plat.newPlayerInTrigger = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D c)
+    {
+        if (PlayerController.IsPlayer(c.gameObject))
+        {
+            plat.newPlayerInTrigger = false;
+        }
+    }
 }
