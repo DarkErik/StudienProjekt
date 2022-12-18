@@ -1193,7 +1193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.size
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[1].sentences.Array.size
@@ -1240,7 +1240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[9]
-      value: You wanna leave?!
+      value: 'My brother and me fled down here. I wonder where he is... '
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
@@ -1287,20 +1287,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[10]
+      value: You wanna leave?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[11]
       value: "You're na\xEFve, I say. They won\u2019t let you. Once you leave the
         basements true horrors will await you."
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
-      propertyPath: dialogues.Array.data[0].sentences.Array.data[11]
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[12]
       value: To be fair, it has been long since I visited the upper levels, very
         long.
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
-      propertyPath: dialogues.Array.data[0].sentences.Array.data[12]
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[13]
       value: Here, take this keycard I once stole. It will open the green door.
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
-      propertyPath: dialogues.Array.data[0].sentences.Array.data[13]
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[14]
       value: Good luck, fella... you will need it!
       objectReference: {fileID: 0}
     - target: {fileID: 1257500089324184574, guid: 84de94e02cb003c49af8f524e8979ec0, type: 3}
