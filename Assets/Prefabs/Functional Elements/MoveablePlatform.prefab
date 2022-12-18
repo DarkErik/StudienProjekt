@@ -718,7 +718,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   timeScale: 5
-  onlyMoveWhenPlayerInTrigger: 1
+  onlyMoveWhenPlayerInTrigger: 0
   pingpongPoints: 0
   movingPlatform: {fileID: 6601060227048013664}
   gear1: {fileID: 6601060225159297740}
@@ -791,19 +791,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5308461328497301934, guid: 1fdf1a2a0a3b30f40b07b7a87d5046cd, type: 3}
   m_PrefabInstance: {fileID: 1310789653009082062}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1310789653009082069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6601060227048013664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39135c25cd9d5e34696ce31a8bd51ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plat: {fileID: 6601060227093796956}
 --- !u!58 &5308461327109665590
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -820,6 +807,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 1.78}
   serializedVersion: 2
   m_Radius: 2.12
+--- !u!114 &1310789653009082069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601060227048013664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39135c25cd9d5e34696ce31a8bd51ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plat: {fileID: 6601060227093796956}
 --- !u!4 &6601060227048013669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5308461328497301931, guid: 1fdf1a2a0a3b30f40b07b7a87d5046cd, type: 3}
