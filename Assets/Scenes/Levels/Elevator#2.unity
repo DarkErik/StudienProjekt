@@ -197,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 11400000, guid: eb10afc35b11d794fb0526a590348d99, type: 2}
+      objectReference: {fileID: 11400000, guid: c29ae7a6139cab24fbfd36a0f609c5b9, type: 2}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: destinationExitName
       value: ExitRight
@@ -1951,6 +1951,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1023957546}
     m_Modifications:
+    - target: {fileID: 3248135140903217757, guid: 26cff7f4b18cae9429edaca5383c55f8, type: 3}
+      propertyPath: flag
+      value: item#Red Keycard
+      objectReference: {fileID: 0}
     - target: {fileID: 3248135140903217758, guid: 26cff7f4b18cae9429edaca5383c55f8, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -14690,6 +14694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1023957546}
     m_Modifications:
+    - target: {fileID: 3248135140903217757, guid: 26cff7f4b18cae9429edaca5383c55f8, type: 3}
+      propertyPath: flag
+      value: item#Red Keycard
+      objectReference: {fileID: 0}
     - target: {fileID: 3248135140903217758, guid: 26cff7f4b18cae9429edaca5383c55f8, type: 3}
       propertyPath: m_RootOrder
       value: 33
