@@ -37,7 +37,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
     {
         CheckGrounded();
 
-        if(!isGrounded) //only when in air, the player can move horizontally
+        //if(!isGrounded) //only when in air, the player can move horizontally
             Walk();
     }
 
@@ -53,6 +53,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
             if (!wasGrounded)
                 OnLand();
         }
+        Debug.Log("IS GROUNDED: " + isGrounded);
 
         if (isGrounded)
             rb.velocity = new Vector2(0f, rb.velocity.y);
@@ -70,7 +71,12 @@ public class PlayerMovementCoilSpring : PlayerMovement
     IEnumerator wait()
     {
         yield return new WaitForSeconds(0.2f);
-        ChargeJump(); //next jump
+        while (isGrounded && !isCharging)
+        {
+            ChargeJump(); //next jump
+            yield return new WaitForEndOfFrame();
+        }
+    
     }
 
     //auto jump or charging process
@@ -78,6 +84,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
     {
         if (Input.GetAxis("Jump") > 0 && !isCharging)
         {
+            isCharging = true;
             movementSmoothing = originalMovementSmoothing * 2;
             walkSpeed = originalWalkSpeed / 2;
             StartCoroutine(Charging());
@@ -106,7 +113,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
     private IEnumerator Charging()
     {
         
-        isCharging = true;
+        
         animator.SetBool("IsCharging", true); //enable charging animation with Animator variable "IsCharging"
         audioCharge.Play();
 
@@ -136,6 +143,7 @@ public class PlayerMovementCoilSpring : PlayerMovement
             //Flip(-1);
         if (horizontalInput > 0 && !isFacingRight) { }
             //Flip(1);
+        
 
         Vector2 targetVelocity = new Vector2(horizontalInput * walkSpeed, rb.velocity.y);
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothing); //smooth movement

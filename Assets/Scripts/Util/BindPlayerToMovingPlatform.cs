@@ -8,17 +8,26 @@ public class BindPlayerToMovingPlatform : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(PlayerController.IsPlayer(collision.gameObject))
+        MoveAlong move = collision.gameObject.GetComponent<MoveAlong>();
+        if(move != null)
         {
-            plat.player = PlayerController.Instance.gameObject;
+            if (move.rb.velocity.y <= 0)
+            {
+                move.rb.velocity = new Vector2(move.rb.velocity.x, 0);
+                plat.ontopObjects.AddLast(move);
+            }
+
+            Debug.Log("Bind: " + move.gameObject.name);
         }
     }
 
     public void OnCollisionExit2D(Collision2D collision)
     {
-        if (PlayerController.IsPlayer(collision.gameObject))
+        MoveAlong move = collision.gameObject.GetComponent<MoveAlong>();
+        if (move != null)
         {
-            plat.player = null;
+            plat.ontopObjects.Remove(move);
+            Debug.Log("Unbind: " + move.gameObject.name);
         }
     }
 

@@ -129,7 +129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8013285883849521792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.73, z: 0}
+  m_LocalPosition: {x: 0, y: -0.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: -2923173914740406817}
   - component: {fileID: 413893861227328104}
   - component: {fileID: 5989926414275841208}
+  - component: {fileID: 2901061867910156054}
   - component: {fileID: 6461182330820714776}
   - component: {fileID: 8190148039227622189}
   m_Layer: 3
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
-  jumpForce: 2.5
+  jumpForce: 3.5
   movementSmoothing: 0.15
   groundLayer:
     serializedVersion: 2
@@ -242,7 +243,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -294,7 +295,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8013285885023592963}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 1e8da3c5e83ca084c8b0e496a710540a, type: 2}
   m_IsTrigger: 0
@@ -320,7 +321,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8013285885023592963}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 1e8da3c5e83ca084c8b0e496a710540a, type: 2}
   m_IsTrigger: 0
@@ -339,6 +340,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0025134087, y: 1.6350784}
   m_EdgeRadius: 0
+--- !u!114 &2901061867910156054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013285885023592963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945403fbd2b32d44a8cfd40601d390d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
+  power: 0
+  powerLoss: 1
+  rb: {fileID: 0}
 --- !u!82 &6461182330820714776
 AudioSource:
   m_ObjectHideFlags: 0
