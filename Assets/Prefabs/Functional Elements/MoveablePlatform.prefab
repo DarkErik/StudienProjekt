@@ -718,11 +718,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   timeScale: 5
+  onlyMoveWhenPlayerInTrigger: 0
   pingpongPoints: 0
   movingPlatform: {fileID: 6601060227048013664}
   gear1: {fileID: 6601060225159297740}
   gear2: {fileID: 6601060226005318890}
   player: {fileID: 0}
+  newPlayerInTrigger: 0
 --- !u!1001 &1310789653009082062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -732,7 +734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5308461328497301930, guid: 1fdf1a2a0a3b30f40b07b7a87d5046cd, type: 3}
       propertyPath: m_DynamicOccludee
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5308461328497301931, guid: 1fdf1a2a0a3b30f40b07b7a87d5046cd, type: 3}
       propertyPath: m_RootOrder
@@ -789,6 +791,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5308461328497301934, guid: 1fdf1a2a0a3b30f40b07b7a87d5046cd, type: 3}
   m_PrefabInstance: {fileID: 1310789653009082062}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &5308461327109665590
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601060227048013664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.78}
+  serializedVersion: 2
+  m_Radius: 2.12
 --- !u!114 &1310789653009082069
 MonoBehaviour:
   m_ObjectHideFlags: 0
