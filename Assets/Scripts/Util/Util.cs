@@ -146,6 +146,11 @@ public static class Util {
 		return v;
     }
 
+	public static Vector2 V3ToV2(Vector3 v)
+	{
+		return v;
+	}
+
 	public static Transform GetRootTransform(Transform t)
     {
 		if (t == null) return null;	

@@ -22,11 +22,13 @@ public class MoveablePlatform : MonoBehaviour
     [SerializeField] private Animator gear1;
     [SerializeField] private Animator gear2;
 
+    [SerializeField] private float velocityConst;
+
     private int nextGoal = 0;
     private float currentTime = 0;
     private int pingpongDirection = 1;
 
-    [HideInInspector] public GameObject player;
+    [HideInInspector] public LinkedList<MoveAlong> ontopObjects = new LinkedList<MoveAlong>();
     private bool oldPlayerInTrigger = true;
     [HideInInspector] public bool newPlayerInTrigger;
 
@@ -75,9 +77,21 @@ public class MoveablePlatform : MonoBehaviour
             gear1.SetFloat("speed", gearSpeed);
             gear2.SetFloat("speed", gearSpeed);
 
-            if (player != null)
+            Vector3 moveDir = (movingPlatform.transform.position - oldPos).normalized;
+            float movePower = (movingPlatform.transform.position - oldPos).magnitude * (1 / Time.deltaTime);
+            foreach (MoveAlong move in ontopObjects) 
             {
-                player.transform.position += movingPlatform.transform.position - oldPos;
+
+                move.direction = moveDir;
+                move.power = movePower;
+                
+                //else
+                //{
+
+                //    player.transform.position += movingPlatform.transform.position - oldPos;
+                //}
+
+
             }
 
         } else
