@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Basement.unity
     guid: d03c5e4d9ede75849bdfd109a49ca4b3
   - enabled: 1
+    path: Assets/Scenes/Levels/BasicControls.unity
+    guid: db613ce59cfefcc499f5bbf972c8fc14
+  - enabled: 1
     path: Assets/Scenes/Levels/SpringAndRun.unity
     guid: 903b7d57278662e43a2a93f7a665fb98
   m_configObjects: {}
