@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/SpringAndRun.unity
     guid: 903b7d57278662e43a2a93f7a665fb98
+  - enabled: 1
+    path: Assets/Scenes/Levels/Connector1.unity
+    guid: fd2ddfce49dc6c342bad4462e88041aa
   m_configObjects: {}
