@@ -842,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8762661036831440024
 RectTransform:
   m_ObjectHideFlags: 0
@@ -976,6 +976,7 @@ MonoBehaviour:
     - This is my first test sentence.
     - This is my second test sentence.
     - This is my third test sentence.
+    id: NONE
 --- !u!1 &8762661037114051665
 GameObject:
   m_ObjectHideFlags: 0
