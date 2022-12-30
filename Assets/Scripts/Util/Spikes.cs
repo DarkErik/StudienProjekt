@@ -19,6 +19,9 @@ public class Spikes : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.75f);
         Time.timeScale = 1;
         Destroy(oldPlayer);
+        
+        AudioManager.instance.Play("Damage");
+        
         RespawnPoint.Respawn();
     }
 }
