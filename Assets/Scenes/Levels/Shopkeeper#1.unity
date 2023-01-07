@@ -3194,7 +3194,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 9193eecc706e65d4cb0035baf5731e39, type: 3}
+    - sprite: {fileID: 21300000, guid: 22a926a05df85134fad58c497df6384a, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -8152,7 +8152,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 9193eecc706e65d4cb0035baf5731e39, type: 3}
+    - sprite: {fileID: 21300000, guid: 22a926a05df85134fad58c497df6384a, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -11423,11 +11423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1655810662089520932, guid: 2839235a905908640977e3a3aa413a81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.87
+      value: 6.79
       objectReference: {fileID: 0}
     - target: {fileID: 1655810662089520932, guid: 2839235a905908640977e3a3aa413a81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.38
+      value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 1655810662089520932, guid: 2839235a905908640977e3a3aa413a81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21411,7 +21411,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 9193eecc706e65d4cb0035baf5731e39, type: 3}
+    - sprite: {fileID: 21300000, guid: 22a926a05df85134fad58c497df6384a, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -26308,7 +26308,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 9193eecc706e65d4cb0035baf5731e39, type: 3}
+    - sprite: {fileID: 21300000, guid: 22a926a05df85134fad58c497df6384a, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -31373,7 +31373,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 9193eecc706e65d4cb0035baf5731e39, type: 3}
+    - sprite: {fileID: 21300000, guid: 22a926a05df85134fad58c497df6384a, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

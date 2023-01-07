@@ -167,8 +167,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2909797497051321401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.03, y: -1.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.9819, y: -1.0153, z: 0}
+  m_LocalScale: {x: 0.45199, y: 0.45199, z: 0.45199}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2909797496941980589}
@@ -256,8 +256,8 @@ MonoBehaviour:
   - {fileID: 2909797497463180712}
   - {fileID: 2909797496799239052}
   m_Bounds:
-    m_Center: {x: 1.0068581, y: 1.0750875, z: 0}
-    m_Extent: {x: 2.2369616, y: 2.1574373, z: 0}
+    m_Center: {x: 0.13143587, y: 1.7056315, z: 0}
+    m_Extent: {x: 1.4255233, y: 2.8038545, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -273,14 +273,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f03b5729df815489f92f54323d1f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
-  angle: 100
+  radius: 4.7
+  additionalIndicationRadius: 5.02
+  angle: 80
   targetMask:
     serializedVersion: 2
     m_Bits: 8
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 128
   eyePos: {fileID: 3437483880442727353}
   seePlayer: 0
 --- !u!114 &2909797497051321395
@@ -837,7 +838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3437483878997733166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.26, y: -1.09, z: 0}
+  m_LocalPosition: {x: 2, y: -1.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

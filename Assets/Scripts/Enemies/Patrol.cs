@@ -36,7 +36,8 @@ public class Patrol : MonoBehaviour
     private void FixedUpdate()
     {
         if (isPatrolling)
-            flip = !Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+            flip = !Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+
     }
 
     void Partolling()
@@ -75,9 +76,14 @@ public class Patrol : MonoBehaviour
             isPatrolling = false;
         }
     }
-public void PutDown()
+    public void PutDown()
     {
         animator.SetBool("Put", true); //initiate putdown animation
         isPatrolling = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, 0.2f);
     }
 }
