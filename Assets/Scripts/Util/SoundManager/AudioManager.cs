@@ -74,7 +74,7 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeBackgroundMusic(string newTrack)
     {
-        instance.ChangeBackgroundMusic(newTrack);
+        instance.ChangeBackgroundMusicLogic(newTrack);
     }
 
     private void ChangeBackgroundMusicLogic(string newTrack)
