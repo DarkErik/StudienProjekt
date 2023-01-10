@@ -9,22 +9,25 @@ public class CoinCounter : MonoBehaviour
     public static CoinCounter instance;
     
     [SerializeField] private float speed;
-    [SerializeField] private Transform target;
-    [SerializeField] private TextMeshProUGUI coinText;
+    private Transform target;
+    private TextMeshProUGUI coinText;
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private AudioSource audioCollect;
-    [SerializeField] private Camera cam;
+    private Camera cam;
     private int currentCoins;
     private float fontSizeOrigin;
 
     private void Awake()
     {
         instance = this;
-        currentCoins = 0;
+        currentCoins = PlayerPrefs.GetInt("coinAmount", 0);
     }
 
     private void Start()
     {
+        target = GameObject.Find("/Manager/MainCanvas/Panel/CoinImage").GetComponent<Transform>();
+        coinText = GameObject.Find("/Manager/MainCanvas/Panel/CoinNumber").GetComponent<TextMeshProUGUI>();
+        cam = GameObject.Find("/Manager/CameraConfiner/Main Camera").GetComponent<Camera>();
         coinText.text = currentCoins.ToString();
         fontSizeOrigin = coinText.fontSize;
     }
@@ -67,6 +70,7 @@ public class CoinCounter : MonoBehaviour
     public void increaseCoins(int v)
     {
         currentCoins += v;
+        PlayerPrefs.SetInt("coinAmount", currentCoins);
         coinText.text = currentCoins.ToString();
     }
 }
