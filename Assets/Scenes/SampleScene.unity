@@ -7334,6 +7334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7acf42c82100a17429317e28bbca3e57, type: 3}
+--- !u!1 &933686264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2293501059833198584, guid: 1b6290f3f8c8cd14b957cb384ff4abd4, type: 3}
+  m_PrefabInstance: {fileID: 2293501059574852074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1004553400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10805,6 +10810,38 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 933686264}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262729970784431103, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5081631182479436828, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10905,6 +10942,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5081631183744691196, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
+      propertyPath: coinPanel
+      value: 
+      objectReference: {fileID: 933686264}
     - target: {fileID: 5081631184446140486, guid: b9f74b1fa7128004498b34aa58896e4f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -12181,6 +12222,18 @@ PrefabInstance:
       objectReference: {fileID: 137617889}
     - target: {fileID: 8391383349401187773, guid: 39dee3dff6e13c54594587be17fca29e, type: 3}
       propertyPath: coinText
+      value: 
+      objectReference: {fileID: 2051193235}
+    - target: {fileID: 8391383349401187773, guid: 39dee3dff6e13c54594587be17fca29e, type: 3}
+      propertyPath: camSerialize
+      value: 
+      objectReference: {fileID: 316472056}
+    - target: {fileID: 8391383349401187773, guid: 39dee3dff6e13c54594587be17fca29e, type: 3}
+      propertyPath: targetSerialize
+      value: 
+      objectReference: {fileID: 137617889}
+    - target: {fileID: 8391383349401187773, guid: 39dee3dff6e13c54594587be17fca29e, type: 3}
+      propertyPath: coinTextSerialize
       value: 
       objectReference: {fileID: 2051193235}
     - target: {fileID: 8391383349401187774, guid: 39dee3dff6e13c54594587be17fca29e, type: 3}

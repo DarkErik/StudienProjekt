@@ -9,6 +9,7 @@ public class CanvasActivate : MonoBehaviour
     float pause = 0f;
     float overlay = 0f;
     [SerializeField] GameObject PauseMenu;
+    [SerializeField] GameObject coinPanel;
     [SerializeField] Image itemOverlayBackground;
     [SerializeField] Image itemOverlayItem1;
     [SerializeField] Image itemOverlayItem2;
@@ -26,6 +27,8 @@ public class CanvasActivate : MonoBehaviour
         if(pause != 0)
         {
             PauseMenu.SetActive(true);
+            if (coinPanel != null)
+                coinPanel.SetActive(false);
         }
         if (overlay != 0)
         {
@@ -59,5 +62,7 @@ public class CanvasActivate : MonoBehaviour
     public void ContinueGame()
     {
         PauseMenu.SetActive(false);
+        if (coinPanel != null)
+            coinPanel.SetActive(true);
     }
 }
