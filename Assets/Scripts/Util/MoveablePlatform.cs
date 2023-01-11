@@ -74,8 +74,11 @@ public class MoveablePlatform : MonoBehaviour
             movingPlatform.transform.position = Vector3.Lerp(points[(nextGoal - pingpongDirection + points.Length) % points.Length].position, points[nextGoal].position, percentage);
 
             float gearSpeed = Mathf.Min(1, (movingPlatform.transform.position - oldPos).magnitude *  (1f/Time.deltaTime) / 2f);
-            gear1.SetFloat("speed", gearSpeed);
-            gear2.SetFloat("speed", gearSpeed);
+            if (!float.IsNaN(gearSpeed))
+            {
+                gear1.SetFloat("speed", gearSpeed);
+                gear2.SetFloat("speed", gearSpeed);
+            }
 
             Vector3 moveDir = (movingPlatform.transform.position - oldPos).normalized;
             float movePower = (movingPlatform.transform.position - oldPos).magnitude * (1 / Time.deltaTime);

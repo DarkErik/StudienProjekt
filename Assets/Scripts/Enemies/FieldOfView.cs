@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    public float radius; //view distance
+    public float radius = 7; //view distance
+    public float additionalIndicationRadius = 3; 
     [Range(0, 360)] public float angle; //view angle
     public LayerMask targetMask; //layer of player
     public LayerMask obstructionMask; //layer of obstructions
@@ -13,7 +14,7 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(FOVRoutine());
+        //StartCoroutine(FOVRoutine());
     }
 
     private IEnumerator FOVRoutine()
@@ -27,28 +28,47 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        FieldOfViewCheck();
+    }
+
     private void FieldOfViewCheck()
     {
-        Collider2D rangeCheck = Physics2D.OverlapCircle(eyePos.position, radius, targetMask);
+        Collider2D rangeCheck = Physics2D.OverlapCircle(eyePos.position, radius + additionalIndicationRadius, targetMask);
 
         if (rangeCheck != null)
         {
             Transform target = rangeCheck.transform;
-            Vector3 directionToTarget = (target.position - eyePos.position).normalized;
+            Vector3 directionToTarget = (target.position - eyePos.position);
+            float distance = directionToTarget.magnitude;
+            directionToTarget.Normalize();
 
             if (Vector3.Angle(eyePos.right, directionToTarget) < angle / 2)
             {
                 float distanceToTarget = Vector3.Distance(eyePos.position, target.position);
 
                 if (!Physics2D.Raycast(eyePos.position, directionToTarget, distanceToTarget, obstructionMask))
-                    seePlayer = true;
-                else
-                    seePlayer = false;
+                    {
+                        if (distance <= radius)
+                        {
+                            seePlayer = true;
+                        }
+                        PostProcessingScientist.Instance.TellIntensity(1 - ((distance - radius) / additionalIndicationRadius));
+                    } else
+                        seePlayer = false;
             }
             else
                 seePlayer = false;
         }
         else if (seePlayer)
             seePlayer = false;
+    }
+
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(eyePos.position, radius);
+        Gizmos.DrawWireSphere(eyePos.position, radius + additionalIndicationRadius);
     }
 }
