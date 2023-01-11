@@ -45,12 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80b71b69ebab8248ab02cf3a1cfe467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  target: {fileID: 0}
-  coinText: {fileID: 0}
+  speed: 20
   coinPrefab: {fileID: 633389322124309365, guid: 8667ca8b4e2a8a64dafa5dd363f2905d, type: 3}
   audioCollect: {fileID: 634953517435778244}
-  cam: {fileID: 0}
 --- !u!82 &634953517435778244
 AudioSource:
   m_ObjectHideFlags: 0
