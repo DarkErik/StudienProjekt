@@ -16,10 +16,16 @@ public class PlayerData
 
 	//Data
 	public int transformationUUID = 0;
-
+	public GameObject morphPlayerObj1 = null;
+	public Sprite morphPlayerSprite1 = null;
+	public GameObject morphPlayerObj2 = null;
+	public Sprite morphPlayerSprite2 = null;
 
 	public void ApplyPlayerData(GameObject player) {
-
+		ItemOverlaySingelton.Instance.powerup1.PlayerObject = morphPlayerObj1;
+		ItemOverlaySingelton.Instance.powerup2.PlayerObject = morphPlayerObj2;
+		ItemOverlaySingelton.Instance.item1.sprite = morphPlayerSprite1;
+		ItemOverlaySingelton.Instance.item2.sprite = morphPlayerSprite2;
 	}
 
 	public void SetFlag(string name)
@@ -55,5 +61,10 @@ public class PlayerData
 	public void UpdateCurrentData() {
 		this.transformationUUID = PlayerController.Instance.getUUID();
 		flags = PlayerData.instance.flags;
+
+		morphPlayerObj1 = ItemOverlaySingelton.Instance.powerup1.PlayerObject;
+		morphPlayerObj2 = ItemOverlaySingelton.Instance.powerup2.PlayerObject;
+		morphPlayerSprite1 = ItemOverlaySingelton.Instance.item1.sprite;
+		morphPlayerSprite2 = ItemOverlaySingelton.Instance.item2.sprite;
 	}
 }

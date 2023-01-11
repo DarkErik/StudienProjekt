@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 5796525735464241014}
   - component: {fileID: 3610679109786030537}
   - component: {fileID: 6760588683973908819}
+  - component: {fileID: 5200687603163688720}
   m_Layer: 3
   m_Name: FlashlightPlayer
   m_TagString: Player
@@ -453,3 +454,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5200687603163688720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900920650385070098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945403fbd2b32d44a8cfd40601d390d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
+  power: 0
+  powerLoss: 5
+  rb: {fileID: 0}
