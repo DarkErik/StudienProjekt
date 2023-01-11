@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 4.7
   additionalIndicationRadius: 5.02
-  angle: 80
+  angle: 38
   targetMask:
     serializedVersion: 2
     m_Bits: 8

@@ -30,9 +30,8 @@ public class PostProcessingScientist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        float sinTime = Mathf.Sin(Time.time * 5) * 0.3f;
-        Debug.Log(sinTime);
+
+        float sinTime = Mathf.Sin(Time.time * 5) * 0.2f;
 
         if (intensity == 0)
             sinTime = 0;
