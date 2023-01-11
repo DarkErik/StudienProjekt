@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 6103326247037964610}
   - component: {fileID: 4333854057575005549}
   - component: {fileID: 3097130143558949895}
+  - component: {fileID: -8248576202808283687}
   m_Layer: 3
   m_Name: FanPlayer
   m_TagString: Player
@@ -793,6 +794,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8248576202808283687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683941768169350596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945403fbd2b32d44a8cfd40601d390d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
+  power: 0
+  powerLoss: 5
+  rb: {fileID: 0}
 --- !u!1 &4683941768205572347
 GameObject:
   m_ObjectHideFlags: 0
