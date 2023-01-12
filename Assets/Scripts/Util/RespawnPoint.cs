@@ -10,7 +10,7 @@ public class RespawnPoint : MonoBehaviour
 
 	public void OnTriggerEnter2D(Collider2D collision) {
 
-		if (collision.gameObject == PlayerController.Instance.gameObject) {
+		if (PlayerController.IsPlayer(collision.gameObject)) {
 			lastRespawnPoint = this;
 			lastPlayerData.UpdateCurrentData();
 		}
