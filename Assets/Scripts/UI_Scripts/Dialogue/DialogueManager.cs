@@ -79,12 +79,13 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeLetters(string sentence)
     {
-        dialgueText.text = "";
+        dialgueText.text = sentence;
+        dialgueText.maxVisibleCharacters = 0;
 
         foreach (char letter in sentence.ToCharArray())
         {
-            dialgueText.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
+            dialgueText.maxVisibleCharacters += 1;
+            yield return new WaitForSecondsRealtime(0.025f);
         }
     }
 
