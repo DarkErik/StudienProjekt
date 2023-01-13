@@ -2537,7 +2537,7 @@ PrefabInstance:
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 11400000, guid: eb10afc35b11d794fb0526a590348d99, type: 2}
+      objectReference: {fileID: 11400000, guid: 4bb674eea500b8a4e8ac0f237b81de3a, type: 2}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: destinationExitName
       value: ExitRight
@@ -4469,19 +4469,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6648162816938374616, guid: 1f7645819ecc11b46b5c25104b99e38e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.997126
       objectReference: {fileID: 0}
     - target: {fileID: 6648162816938374616, guid: 1f7645819ecc11b46b5c25104b99e38e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6648162816938374616, guid: 1f7645819ecc11b46b5c25104b99e38e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6648162816938374616, guid: 1f7645819ecc11b46b5c25104b99e38e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.075761914
       objectReference: {fileID: 0}
     - target: {fileID: 6648162816938374616, guid: 1f7645819ecc11b46b5c25104b99e38e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4493,7 +4493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6648162816938374616, guid: 1f7645819ecc11b46b5c25104b99e38e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 8.69
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f7645819ecc11b46b5c25104b99e38e, type: 3}
@@ -46709,7 +46709,7 @@ PrefabInstance:
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 11400000, guid: eb10afc35b11d794fb0526a590348d99, type: 2}
+      objectReference: {fileID: 11400000, guid: 57e57e23ecb46bd4895ab332a7bbfb36, type: 2}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: destinationExitName
       value: ExitLeft
