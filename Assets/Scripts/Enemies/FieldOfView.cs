@@ -68,7 +68,12 @@ public class FieldOfView : MonoBehaviour
 
     public void OnDrawGizmos()
     {
+        float radii = radius + additionalIndicationRadius;
         Gizmos.DrawWireSphere(eyePos.position, radius);
-        Gizmos.DrawWireSphere(eyePos.position, radius + additionalIndicationRadius);
+        Gizmos.DrawWireSphere(eyePos.position, radii);
+        Gizmos.DrawLine(eyePos.position, eyePos.position + new Vector3(Mathf.Cos(angle / 2), Mathf.Sin(angle/2))*radii);
+        Gizmos.DrawLine(eyePos.position, eyePos.position + new Vector3(Mathf.Cos(angle / 2), -Mathf.Sin(angle/2))*radii); 
+        Gizmos.DrawLine(eyePos.position, eyePos.position + new Vector3(-Mathf.Cos(angle / 2), Mathf.Sin(angle/2))*radii);
+        Gizmos.DrawLine(eyePos.position, eyePos.position + new Vector3(-Mathf.Cos(angle / 2), -Mathf.Sin(angle/2))*radii);
     }
 }

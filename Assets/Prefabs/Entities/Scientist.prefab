@@ -176,6 +176,7 @@ Transform:
   - {fileID: 8380772926564028120}
   - {fileID: 5400220851689870705}
   - {fileID: 1502794241464822993}
+  - {fileID: 2268723055931628917}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -256,8 +257,8 @@ MonoBehaviour:
   - {fileID: 2909797497463180712}
   - {fileID: 2909797496799239052}
   m_Bounds:
-    m_Center: {x: 0.13144064, y: 1.7056326, z: 0}
-    m_Extent: {x: 1.4255166, y: 2.803854, z: 0}
+    m_Center: {x: 0.13143587, y: 1.7056315, z: 0}
+    m_Extent: {x: 1.4255233, y: 2.8038545, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -274,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 4.7
-  additionalIndicationRadius: 5.02
+  additionalIndicationRadius: 7.16
   angle: 38
   targetMask:
     serializedVersion: 2
@@ -282,7 +283,7 @@ MonoBehaviour:
   obstructionMask:
     serializedVersion: 2
     m_Bits: 128
-  eyePos: {fileID: 3437483880442727353}
+  eyePos: {fileID: 2268723055931628917}
   seePlayer: 0
 --- !u!114 &2909797497051321395
 MonoBehaviour:
@@ -1353,3 +1354,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &9186960072133146164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2268723055931628917}
+  m_Layer: 6
+  m_Name: NewEyePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2268723055931628917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9186960072133146164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16, y: 1.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2909797497051321405}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
