@@ -80,6 +80,13 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: ScientistSpotted
+    clip: {fileID: 8300000, guid: be76de11379d80648a6c3f4e59b4364e, type: 3}
+    output: {fileID: -5045297731924226733, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
   - name: SceneTransition
     clip: {fileID: 8300000, guid: 5a5fe3ca5e25e124aac7b34e7000d268, type: 3}
     output: {fileID: -5045297731924226733, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
@@ -124,13 +131,6 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DarkScienceBGM
     clip: {fileID: 8300000, guid: b8708a0a0aaa08d4fa2ddf9e297c662b, type: 3}
-    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
-    loop: 1
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: DialogueBGM
-    clip: {fileID: 8300000, guid: eab57e7ca958d094f88264b2e7b0050d, type: 3}
     output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
     loop: 1
     volume: 1

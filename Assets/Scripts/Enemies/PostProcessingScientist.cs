@@ -52,10 +52,12 @@ public class PostProcessingScientist : MonoBehaviour
     private IEnumerator Spotted()
     {
         Instantiate(spottedScreen);
+        AudioManager.instance.Play("ScientistSpotted");
         yield return new WaitForSecondsRealtime(2f);
         RespawnPoint.Respawn();
         spotted = false;
         Time.timeScale = 1;
+        intensity = 0;
     }
 
     public void TellIntensity(float intensity)
