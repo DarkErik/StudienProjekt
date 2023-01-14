@@ -13,6 +13,7 @@ public class ElevatorPerformer : Performer
     {
         if (Exit.exitSpawnName == "elev")
         {
+            anim.Play("ElevatorClose");
             Exit.SpawnNewPlayer(respawnPoint.transform.position, PlayerData.instance);
             Time.timeScale = 1f;
         }
