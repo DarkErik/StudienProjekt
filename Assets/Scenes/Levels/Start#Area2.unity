@@ -6470,7 +6470,7 @@ PrefabInstance:
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 11400000, guid: c46983c9c79fa7045b19d9201db606f3, type: 2}
+      objectReference: {fileID: 11400000, guid: ab2372f56e2d2d94dba28c579b2c459e, type: 2}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: destinationExitName
       value: ExitLeft
