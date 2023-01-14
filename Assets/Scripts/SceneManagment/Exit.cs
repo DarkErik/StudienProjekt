@@ -47,6 +47,7 @@ public class Exit : MonoBehaviour {
 		
 		Destroy(GameObject.Find("Player"));
 		Destroy(GameObject.Find("Player(Clone)"));
+		Destroy(PlayerController.Instance.gameObject);
 		GameObject player = Instantiate(Factory.Instance.GetPlayerTransformation(data.transformationUUID), spawnPosition, default);
 		data.ApplyPlayerData(player);
 	}

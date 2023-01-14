@@ -6297,7 +6297,7 @@ MonoBehaviour:
   performer:
   - {fileID: 6018550495141016508}
   anim: {fileID: 1262704259}
-  scene: {fileID: 11400000, guid: eb10afc35b11d794fb0526a590348d99, type: 2}
+  scene: {fileID: 11400000, guid: 911af915a9c272842a73f07abcec520a, type: 2}
   dir: 3
   respawnPoint: {fileID: 329634190}
 --- !u!1 &6312308765207106880
