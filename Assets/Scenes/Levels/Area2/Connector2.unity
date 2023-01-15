@@ -47612,10 +47612,10 @@ PrefabInstance:
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 11400000, guid: eb10afc35b11d794fb0526a590348d99, type: 2}
+      objectReference: {fileID: 11400000, guid: 8cec08517f0be114697824f98f037bd9, type: 2}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: destinationExitName
-      value: ExitLeft
+      value: ExitLowerLeft
       objectReference: {fileID: 0}
     - target: {fileID: 2649171095893063967, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: m_Name
@@ -50989,11 +50989,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762661036324130313, guid: 7411787b37f05094e809d4f2896d4002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2820199
+      value: 1.282779
       objectReference: {fileID: 0}
     - target: {fileID: 8762661036324130313, guid: 7411787b37f05094e809d4f2896d4002, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54269
+      value: -0.5427
       objectReference: {fileID: 0}
     - target: {fileID: 8762661036989369147, guid: 7411787b37f05094e809d4f2896d4002, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size

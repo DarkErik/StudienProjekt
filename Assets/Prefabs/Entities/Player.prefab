@@ -348,8 +348,8 @@ MonoBehaviour:
   - {fileID: 4795797789236065947}
   - {fileID: 931009330193950200}
   m_Bounds:
-    m_Center: {x: 0.055122852, y: 0.087718904, z: 0}
-    m_Extent: {x: 0.8735186, y: 0.9609636, z: 0}
+    m_Center: {x: 0.055116177, y: 0.087717, z: 0}
+    m_Extent: {x: 0.8735119, y: 0.9609617, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -520,7 +520,7 @@ MonoBehaviour:
   amountOfJumps: 1
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   directionFlipTransform: {fileID: 1655810662089520932}
   wallJumpDir: {x: 0, y: 0}
   jumpAudio: {fileID: 4715799981635335640}
@@ -1599,8 +1599,8 @@ MonoBehaviour:
   - {fileID: 7784909645437821962}
   - {fileID: 5600986492360050288}
   m_Bounds:
-    m_Center: {x: -0.012723446, y: 2.4088273, z: 0}
-    m_Extent: {x: 3.5406933, y: 4.0571375, z: 0}
+    m_Center: {x: -0.012717724, y: 2.4088264, z: 0}
+    m_Extent: {x: 3.5406933, y: 4.0571365, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
