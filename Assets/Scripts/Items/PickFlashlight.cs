@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickFlashlight : MonoBehaviour
 {
     public bool puttingDown = false;
+    public bool activateRb = false;
     [SerializeField] GameObject handPos;
 
     void ActivateHandPos()
