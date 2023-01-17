@@ -257,8 +257,8 @@ MonoBehaviour:
   - {fileID: 2909797497463180712}
   - {fileID: 2909797496799239052}
   m_Bounds:
-    m_Center: {x: 0.13143587, y: 1.7056315, z: 0}
-    m_Extent: {x: 1.4255233, y: 2.8038545, z: 0}
+    m_Center: {x: 1.0053526, y: 1.0767524, z: 0}
+    m_Extent: {x: 2.23568, y: 2.158907, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puttingDown: 0
+  activateRb: 0
   handPos: {fileID: 3437483879277428787}
 --- !u!114 &2881695267545991362
 MonoBehaviour:

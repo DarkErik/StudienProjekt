@@ -31,7 +31,10 @@ public class Demorph : MonoBehaviour
         Collider2D[] colliders = oldPlayer.GetComponents<Collider2D>();
         MonoBehaviour[] scripts = oldPlayer.GetComponents<MonoBehaviour>();
         Rigidbody2D rb = oldPlayer.GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Static;
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+        }
 
         if (colliders != null)
         {

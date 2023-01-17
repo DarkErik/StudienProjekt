@@ -5,8 +5,11 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     public GameObject scientist; //scientist that picks up flashlight
-
+    [SerializeField] int flashlightLayer = 9;
+    [SerializeField] int defaultLayer = 0;
+    [SerializeField] int noCollisionLayer = 10;
     [SerializeField] GameObject lightning;
+    [SerializeField] Rigidbody2D rb;
     public AudioSource audioChangeMode;
 
     private bool isBright = false; //signals if the flashlight is on
@@ -16,6 +19,16 @@ public class Flashlight : MonoBehaviour
 
     void Update()
     {
+        if (scientist != null)
+        {
+            if (scientist.GetComponent<PickFlashlight>().activateRb == true)
+            {
+                if (rb == null)
+                {
+                    rb = gameObject.AddComponent<Rigidbody2D>();
+                }
+            }
+        }
         //turn flashlight on and off by space
         flash = Input.GetAxis("Flashlight");
         if (flash != 0)
@@ -23,6 +36,14 @@ public class Flashlight : MonoBehaviour
             if (isFlashlight)
             {
                 isBright = !isBright;
+                if (!isBright) 
+                { 
+                    gameObject.layer = flashlightLayer;
+                }
+                else
+                { 
+                    gameObject.layer = defaultLayer;
+                }
                 lightning.SetActive(isBright);
                 isFlashlight = false;
                 audioChangeMode.Play();
@@ -38,6 +59,8 @@ public class Flashlight : MonoBehaviour
             if (isPickUp)
             {
                 scientist.GetComponent<Patrol>().PutDown();
+                gameObject.layer = flashlightLayer;
+
                 isPickUp = false;
             }
         }
@@ -57,6 +80,7 @@ public class Flashlight : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isBright)
@@ -70,7 +94,9 @@ public class Flashlight : MonoBehaviour
                 }
                 if (collision.CompareTag("ScientistHand")) //if colliding with the scientists HandPoint, get picked up
                 {
+                    Destroy(rb);
                     transform.SetParent(collision.transform);
+                    gameObject.layer = noCollisionLayer;
                     //transform.rotation = collision.transform.rotation * Quaternion.Euler(0f, 0f, 0f);
                     transform.localRotation = Quaternion.Euler(0f, 0f, 137f);
                     //transform.rotation = Quaternion.identity;

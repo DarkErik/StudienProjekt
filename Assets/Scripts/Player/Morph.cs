@@ -132,7 +132,10 @@ public class Morph : MonoBehaviour
         Collider2D[] collidersChildren = oldPlayer.GetComponentsInChildren<Collider2D>();
         MonoBehaviour[] scripts = oldPlayer.GetComponents<MonoBehaviour>();
         Rigidbody2D rb = oldPlayer.GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Static;
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+        }
 
         if (colliders != null)
         {

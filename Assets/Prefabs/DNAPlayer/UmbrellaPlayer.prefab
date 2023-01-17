@@ -90,7 +90,7 @@ MonoBehaviour:
   movementSmoothing: 0.3
   groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   groundCheck: {fileID: 9157842903187774689}
   rb: {fileID: 3247297615138591719}
   animator: {fileID: 9157842904698991727}
