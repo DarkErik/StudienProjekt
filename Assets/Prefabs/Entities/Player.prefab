@@ -531,6 +531,7 @@ MonoBehaviour:
   animator: {fileID: 209608391336808710}
   particleSystem: {fileID: 1364101099621881197}
   dashUnlocked: 0
+  sr: {fileID: 170948646469721948}
 --- !u!114 &1655810662089520934
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48383,12 +48383,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: dir
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 11400000, guid: eb10afc35b11d794fb0526a590348d99, type: 2}
+      objectReference: {fileID: 11400000, guid: 0646ea05ac8901d4db945cc8241d842c, type: 2}
     - target: {fileID: 2649171095893063965, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: destinationExitName
       value: ExitRight
@@ -48396,6 +48396,10 @@ PrefabInstance:
     - target: {fileID: 2649171095893063967, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: m_Name
       value: ExitTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649171095893063967, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7787154753664130833, guid: 88e246269ae671249a32b40cb8db022e, type: 3}
       propertyPath: m_LocalPosition.x

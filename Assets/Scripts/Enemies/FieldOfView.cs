@@ -14,6 +14,8 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
+        radius = radius * float.Parse(PlayerPrefs.GetString("scientistWeaker", "1"));
+
         //StartCoroutine(FOVRoutine());
     }
 

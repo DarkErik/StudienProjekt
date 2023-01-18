@@ -122,6 +122,8 @@ public class PlayerMovementDefault : PlayerMovement
 
 	public bool dashUnlocked = false;
 
+	[SerializeField] private SpriteRenderer sr;
+
 
 	protected virtual void Awake()
 	{
@@ -137,6 +139,10 @@ public class PlayerMovementDefault : PlayerMovement
 		wallJumpDir.Normalize();
 		if (wallJumpDir.x > 0) wallJumpDir.x = -wallJumpDir.x;
 
+		String color = PlayerPrefs.GetString("playerColor", "#FFFFFF");
+		Color newColor;
+		ColorUtility.TryParseHtmlString(color, out newColor);
+		sr.color = newColor;
 
 	}
 

@@ -14,7 +14,7 @@ public class CoinCounter : MonoBehaviour
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private AudioSource audioCollect;
     private Camera cam;
-    private int currentCoins;
+    public int currentCoins;
     private float fontSizeOrigin;
 
     private void Awake()
