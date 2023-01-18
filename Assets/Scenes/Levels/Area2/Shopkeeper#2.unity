@@ -3971,6 +3971,7 @@ GameObject:
   - component: {fileID: 527030784}
   - component: {fileID: 527030786}
   - component: {fileID: 527030785}
+  - component: {fileID: 527030788}
   - component: {fileID: 527030787}
   m_Layer: 5
   m_Name: ScientistWeaker
@@ -4069,6 +4070,18 @@ MonoBehaviour:
             m_StringArgument: With this, scientists see less far
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 527030788}
+          m_TargetAssemblyTypeName: ChangeScale, Assembly-CSharp
+          m_MethodName: Increase
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -4085,6 +4098,49 @@ MonoBehaviour:
             m_StringArgument: With this, scientists see less far
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 610944654}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ButtonClick
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 527030788}
+          m_TargetAssemblyTypeName: ChangeScale, Assembly-CSharp
+          m_MethodName: Decrease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 4
+            m_FloatArgument: 0
+            m_StringArgument: With this, scientists see less far
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &527030788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527030783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f363ba598d85ef64d98466bb692bec00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newScale: 1.1
+  changePerSecond: 1
+  rtransform: {fileID: 527030784}
 --- !u!1001 &566242184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4225,6 +4281,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8748990375159700940, guid: 5477eafed85c7e74388435e39392a7f7, type: 3}
   m_PrefabInstance: {fileID: 598438552}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &610944654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5475483891497271336, guid: 8ee8cef2f083d914b9f0009c31e2a33e, type: 3}
+  m_PrefabInstance: {fileID: 1501373567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d3aab88d7c72c45a88c388cdd6d3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,6 +5610,7 @@ GameObject:
   - component: {fileID: 1049096244}
   - component: {fileID: 1049096246}
   - component: {fileID: 1049096245}
+  - component: {fileID: 1049096248}
   - component: {fileID: 1049096247}
   m_Layer: 5
   m_Name: SkinViolet
@@ -5561,7 +5629,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 374218620}
   - {fileID: 158350463}
@@ -5641,6 +5709,18 @@ MonoBehaviour:
             m_StringArgument: This changes your skin color to violet
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1049096248}
+          m_TargetAssemblyTypeName: IncreaseScale, Assembly-CSharp
+          m_MethodName: Increase
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -5657,6 +5737,49 @@ MonoBehaviour:
             m_StringArgument: This changes your skin color to violet
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 610944654}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ButtonClick
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1049096248}
+          m_TargetAssemblyTypeName: IncreaseScale, Assembly-CSharp
+          m_MethodName: Decrease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: This changes your skin color to violet
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1049096248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049096243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f363ba598d85ef64d98466bb692bec00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newScale: 1.1
+  changePerSecond: 1
+  rtransform: {fileID: 1049096244}
 --- !u!1 &1054503576
 GameObject:
   m_ObjectHideFlags: 0
@@ -15084,6 +15207,7 @@ GameObject:
   - component: {fileID: 1496048347}
   - component: {fileID: 1496048349}
   - component: {fileID: 1496048348}
+  - component: {fileID: 1496048351}
   - component: {fileID: 1496048350}
   m_Layer: 5
   m_Name: SkinBlue
@@ -15182,6 +15306,18 @@ MonoBehaviour:
             m_StringArgument: This changes your skin color to blue
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1496048351}
+          m_TargetAssemblyTypeName: ChangeScale, Assembly-CSharp
+          m_MethodName: Increase
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -15198,6 +15334,49 @@ MonoBehaviour:
             m_StringArgument: This changes your skin color to blue
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 610944654}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ButtonClick
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1496048351}
+          m_TargetAssemblyTypeName: ChangeScale, Assembly-CSharp
+          m_MethodName: Decrease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: This changes your skin color to blue
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1496048351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496048346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f363ba598d85ef64d98466bb692bec00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newScale: 1.1
+  changePerSecond: 1
+  rtransform: {fileID: 1496048347}
 --- !u!1001 &1501373567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15851,6 +16030,7 @@ GameObject:
   - component: {fileID: 1761844214}
   - component: {fileID: 1761844216}
   - component: {fileID: 1761844215}
+  - component: {fileID: 1761844218}
   - component: {fileID: 1761844217}
   m_Layer: 5
   m_Name: SkinPink
@@ -15949,6 +16129,18 @@ MonoBehaviour:
             m_StringArgument: This changes your skin color to pink
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1761844218}
+          m_TargetAssemblyTypeName: ChangeScale, Assembly-CSharp
+          m_MethodName: Increase
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -15965,6 +16157,49 @@ MonoBehaviour:
             m_StringArgument: This changes your skin color to pink
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 610944654}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ButtonClick
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1761844218}
+          m_TargetAssemblyTypeName: ChangeScale, Assembly-CSharp
+          m_MethodName: Decrease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: This changes your skin color to pink
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1761844218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761844213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f363ba598d85ef64d98466bb692bec00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newScale: 1.1
+  changePerSecond: 1
+  rtransform: {fileID: 1761844214}
 --- !u!1 &1810014710
 GameObject:
   m_ObjectHideFlags: 0
