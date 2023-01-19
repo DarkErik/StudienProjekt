@@ -84,6 +84,9 @@ public class DialogueManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray())
         {
+            if(dialgueText.maxVisibleCharacters % 3 == 0)
+                AudioManager.instance.Play("VoiceFX");
+
             dialgueText.maxVisibleCharacters += 1;
             yield return new WaitForSecondsRealtime(0.025f);
         }
