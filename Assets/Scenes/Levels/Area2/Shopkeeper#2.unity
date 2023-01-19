@@ -16355,7 +16355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This changes your skin color to pink
+  m_text: What do you want to buy?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb64ad5a6766c874cbfec2c4728e8cd7, type: 2}
   m_sharedMaterial: {fileID: 1753624859307499171, guid: cb64ad5a6766c874cbfec2c4728e8cd7, type: 2}

@@ -35,6 +35,9 @@ public class ShopManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray())
         {
+            if (descriptionText.maxVisibleCharacters % 3 == 0)
+                AudioManager.instance.Play("VoiceFX");
+
             descriptionText.maxVisibleCharacters += 1;
             yield return new WaitForSecondsRealtime(0.025f);
         }
