@@ -44,7 +44,12 @@ public class Exit : MonoBehaviour {
 	}
 
 	public static void SpawnNewPlayer(Vector3 spawnPosition, PlayerData data) {
-		
+		Object[] shots = GameObject.FindObjectsOfTypeAll(typeof(Shot));
+		for (int i = 0; i < shots.Length; i++)
+		{
+			Destroy(((Shot)shots[i]).gameObject);
+		}
+
 		Destroy(GameObject.Find("Player"));
 		Destroy(GameObject.Find("Player(Clone)"));
 		Destroy(PlayerController.Instance.gameObject);
