@@ -6,11 +6,16 @@ public class KanonPerformer : Performer
 {
     [SerializeField] private DropItemPerfomer diP;
     [SerializeField] private GameObject explosion;
+    private bool alreadyActivated = false;
 
 
     public override void OnTap(Trigger triggerData)
     {
-        StartCoroutine(Expl());
+        if (!alreadyActivated)
+        {
+            alreadyActivated = true;
+            StartCoroutine(Expl());
+        }
     }
 
     private IEnumerator Expl()

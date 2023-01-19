@@ -22,6 +22,7 @@ public class Boss : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject shotPrefab;
     [SerializeField] private Transform shotPos;
+    [SerializeField] private GameObject onDeathParticleSystem;
 
     private void Awake()
     {
@@ -104,11 +105,21 @@ public class Boss : MonoBehaviour
     private IEnumerator _ContinuePhase()
     {
         anim.Play("Hit");
-        yield return new WaitForSeconds(1.75f);
-        startPos = transform.position;
-        phase++;
-        traverseTime = 0;
-        traversing = true;
-        hurt = false;
+        if (phase + 1 >= phases.Length)
+        {
+            onDeathParticleSystem.SetActive(true);
+            onDeathParticleSystem.transform.SetParent(null, true);
+            yield return new WaitForSeconds(3.5f);
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1.75f);
+            startPos = transform.position;
+            phase++;
+            traverseTime = 0;
+            traversing = true;
+            hurt = false;
+        }
     }
 }
