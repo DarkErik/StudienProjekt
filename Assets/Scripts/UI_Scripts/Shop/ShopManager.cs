@@ -87,6 +87,27 @@ public class ShopManager : MonoBehaviour
         coinText.text = CoinCounter.instance.currentCoins.ToString();
         StartCoroutine(HighlightText());
 
+        if (id == 1 || id == 2 || id == 3)
+        {
+            SpriteRenderer sr1 = null;
+            GameObject go1 = GameObject.Find("Player/AlienV2_WithoutEyes");
+            if (go1 != null)
+                sr1 = go1.GetComponent<SpriteRenderer>();
+
+            SpriteRenderer sr2 = null;
+            GameObject go2 = GameObject.Find("Player(Clone)/AlienV2_WithoutEyes");
+            if (go2 != null)
+                sr2 = go2.GetComponent<SpriteRenderer>();
+
+            Color newColor;
+            ColorUtility.TryParseHtmlString(value, out newColor);
+
+            if (sr1 != null)
+                sr1.color = newColor;
+            if (sr2 != null)
+                sr2.color = newColor;
+        }
+
         PlayerPrefs.SetString(key, value);
     }
 
