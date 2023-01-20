@@ -6,8 +6,9 @@ using TMPro;
 
 public class CanvasActivate : MonoBehaviour
 {
-    float pause = 0f;
+    bool pause = false;
     float overlay = 0f;
+    [SerializeField] GameObject ShopMenu;
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject coinPanel;
     [SerializeField] Image itemOverlayBackground;
@@ -22,13 +23,28 @@ public class CanvasActivate : MonoBehaviour
 
     void Update()
     {
-        pause = Input.GetAxis("PauseGame");
+        pause = Input.GetButtonDown("PauseGame");
         overlay = Input.GetAxis("OverlayItems");
-        if(pause != 0)
+        if(pause)
         {
-            PauseMenu.SetActive(true);
-            if (coinPanel != null)
-                coinPanel.SetActive(false);
+            if(ShopMenu != null)
+            {
+                if (!ShopMenu.activeInHierarchy)
+                {
+                    PauseMenu.SetActive(true);
+                    if (coinPanel != null)
+                        coinPanel.SetActive(false);
+                    
+                } else
+                {
+                    ShopMenu.SetActive(false);
+                }
+            } else {
+                PauseMenu.SetActive(true);
+                if (coinPanel != null)
+                    coinPanel.SetActive(false);
+            }
+            
         }
         if (overlay != 0)
         {

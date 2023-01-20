@@ -155,7 +155,7 @@ public class PlayerMovementDefault : PlayerMovement
 		CheckCanJump();
 		CheckIfWallSliding();
 		UpdatePartikleSystem();
-		BUGGED_RESET();
+		//BUGGED_RESET();
 	}
 
 	private void BUGGED_RESET()
