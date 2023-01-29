@@ -64,7 +64,7 @@ public class DialogueManager : MonoBehaviour
             if (setFlagOnFinish)
                 PlayerData.instance.SetFlag(DialogPerformer.DIALOGUE_FLAG_PREFIX + currentDialogue.id);
             
-            Debug.Log(DialogPerformer.DIALOGUE_FLAG_PREFIX + currentDialogue.id + " " + setFlagOnFinish);
+            //Debug.Log(DialogPerformer.DIALOGUE_FLAG_PREFIX + currentDialogue.id + " " + setFlagOnFinish);
 
             currentDialogue = null;
             PlayerMovement.WakeUp();

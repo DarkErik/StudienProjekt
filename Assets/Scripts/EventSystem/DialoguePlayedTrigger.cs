@@ -6,6 +6,7 @@ public class DialoguePlayedTrigger : Trigger
 {
     [SerializeField] private string dialogueID = "name";
     [SerializeField] private bool fireOnDialogueStart = false;
+    [SerializeField] private bool tapOnly = false;
 
     private bool dialogueStartedPlaying = false;
     private bool dialogueFinished = false;
@@ -17,18 +18,31 @@ public class DialoguePlayedTrigger : Trigger
 
     public void Update()
     {
+
         if (!dialogueStartedPlaying && DialogueManager.currentDialogue != null && DialogueManager.currentDialogue.id == dialogueID)
         {
             if (fireOnDialogueStart)
             {
-                SetTriggerState(true);
+                if (!tapOnly)
+                    SetTriggerState(true);
+                else 
+                    TapTrigger();
             }
             dialogueStartedPlaying = true;
         }
 
         if (!fireOnDialogueStart && dialogueStartedPlaying && !dialogueFinished && (DialogueManager.currentDialogue == null || DialogueManager.currentDialogue.id != dialogueID)) {
-            SetTriggerState(true);
             dialogueFinished = true;
+            if (!tapOnly)
+                SetTriggerState(true);
+            else
+                TapTrigger();
         }
+    }
+
+    public void Restart()
+    {
+        dialogueFinished = false;
+        dialogueStartedPlaying = false;
     }
 }

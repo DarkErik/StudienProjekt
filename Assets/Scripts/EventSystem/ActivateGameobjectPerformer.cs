@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class ActivateGameobjectPerformer : Performer
 {
+    private bool deactivateFalse = false;
     [SerializeField] private new GameObject gameObject;
     public override void OnTap(Trigger triggerData)
     {
+        deactivateFalse = true;
         gameObject?.SetActive(!gameObject.activeSelf);
     }
 
     protected override void OnUpdateFalse()
     {
-        if (gameObject != null && gameObject.activeSelf)
+        if (gameObject != null && gameObject.activeSelf && !deactivateFalse)
+        {
+            Debug.Log("UpdateFaslse");
             gameObject.SetActive(false);
+        }
     }
 
     protected override void OnUpdate()
