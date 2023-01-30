@@ -69,7 +69,7 @@ public class ShopManager : MonoBehaviour
             case 4:
                 price = 100;
                 key = "scientistWeaker";
-                value = "0.75";
+                value = "1";
                 break;
             default:
                 break;
