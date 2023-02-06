@@ -25,8 +25,13 @@ public class PlayerMovementLantern : PlayerMovement
     {
         timer = 0f;
         canChangeMode = true;
-        currentMode = LightMode.Off;
-        OffLightMode();
+
+        if (lanternGreenMaterial.GetFloat("_GreenValue") == 1)
+            GreenLightMode();
+        else if (lanternRedMaterial.GetFloat("_RedValue") == 1)
+            RedLightMode();
+        else
+            OffLightMode();
     }
 
 

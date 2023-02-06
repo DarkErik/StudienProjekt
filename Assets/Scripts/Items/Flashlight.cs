@@ -30,7 +30,7 @@ public class Flashlight : MonoBehaviour
             }
         }
         //turn flashlight on and off by space
-        flash = Input.GetAxis("Flashlight");
+        flash = Input.GetAxis("Ability");
         if (flash != 0)
         {
             if (isFlashlight)
