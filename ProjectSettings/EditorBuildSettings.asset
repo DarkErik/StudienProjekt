@@ -71,4 +71,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Area2/Boss.unity
     guid: 138206205f7e45e47919173030f63ed2
+  - enabled: 1
+    path: Assets/Scenes/Levels/Area2/Elevator#Area2End.unity
+    guid: 7783c13e19e675549bd9a1c0d006917c
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ae9bdc235721bd94890470fd4213f668
   m_configObjects: {}

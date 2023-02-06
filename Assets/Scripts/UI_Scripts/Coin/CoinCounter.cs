@@ -21,6 +21,7 @@ public class CoinCounter : MonoBehaviour
     {
         instance = this;
         currentCoins = PlayerPrefs.GetInt("coinAmount", 0);
+        Debug.Log(currentCoins);
     }
 
     private void Start()

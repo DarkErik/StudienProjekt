@@ -9,7 +9,8 @@ public class ActivateGameobjectPerformer : Performer
     public override void OnTap(Trigger triggerData)
     {
         deactivateFalse = true;
-        gameObject?.SetActive(!gameObject.activeSelf);
+        if (gameObject != null)
+            gameObject.SetActive(!gameObject.activeSelf);
     }
 
     protected override void OnUpdateFalse()

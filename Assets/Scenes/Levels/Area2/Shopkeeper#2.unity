@@ -6443,6 +6443,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1810014711}
     m_Modifications:
+    - target: {fileID: 465564890937522150, guid: 68fb70ae2f694904092cef5ed6044b40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 465564890937522151, guid: 68fb70ae2f694904092cef5ed6044b40, type: 3}
       propertyPath: dialogues.Array.data[0].id
       value: Shopkeeper#2
@@ -16956,6 +16960,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8748990375159700940, guid: 5477eafed85c7e74388435e39392a7f7, type: 3}
   m_PrefabInstance: {fileID: 2115634272}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2126636559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 465564890937522150, guid: 68fb70ae2f694904092cef5ed6044b40, type: 3}
+  m_PrefabInstance: {fileID: 1356349150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2126636567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126636559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5187a0251b0d54e8788b20a17d53a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  performer: []
+  gameObject: {fileID: 484613798}
+--- !u!114 &2126636568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126636559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81dd11beb6b6dd4693dc7b9a9808b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  performer:
+  - {fileID: 2126636567}
+  - {fileID: 2126636569}
+  dialogueID: Shopkeeper#2
+  fireOnDialogueStart: 0
+  tapOnly: 1
+--- !u!114 &2126636569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126636559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dceef878fa80e224592a6dcd01aef7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  performer: []
+  trigger: {fileID: 2126636568}
 --- !u!1001 &8762661036090027326
 PrefabInstance:
   m_ObjectHideFlags: 0
