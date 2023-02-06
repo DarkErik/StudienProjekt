@@ -136,6 +136,13 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: EndBGM
+    clip: {fileID: 8300000, guid: eab57e7ca958d094f88264b2e7b0050d, type: 3}
+    output: {fileID: -3121098017466027749, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
+    loop: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
   - name: VoiceFX
     clip: {fileID: 8300000, guid: 58263c88c31e15348821d9b20ac93402, type: 3}
     output: {fileID: -5045297731924226733, guid: 17bfba0b268a45045a0922e9abeb3e50, type: 2}
