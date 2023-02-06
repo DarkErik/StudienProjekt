@@ -7,7 +7,7 @@ public class PlayerData
 {
 	public static PlayerData instance = new PlayerData();
 
-	private LinkedList<string> flags = new LinkedList<string>();
+	public LinkedList<string> flags = new LinkedList<string>();
 	
 
 	public PlayerData() {

@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        PlayerData.instance = new PlayerData();
+        PlayerData.instance.flags.Clear();
         SceneManager.LoadScene("Start");
     }
 
