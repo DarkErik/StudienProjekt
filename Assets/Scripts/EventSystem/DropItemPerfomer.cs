@@ -40,6 +40,7 @@ public class DropItemPerfomer : Performer
             currentTime += Time.deltaTime;
         }
 
+        if (item != null)
         item.transform.position = to.position;
     }
 

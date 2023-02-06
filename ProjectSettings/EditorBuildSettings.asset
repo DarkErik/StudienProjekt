@@ -54,6 +54,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Scientist#1.unity
     guid: eb6b02961959f554485236d91c36d530
   - enabled: 1
+    path: Assets/Scenes/Levels/Area2/Fan#1.unity
+    guid: 128b3dfd201c82d4d885495a30eb3cbc
+  - enabled: 1
+    path: Assets/Scenes/Levels/Area2/Fan#2.unity
+    guid: f5cd673c3252e36498904bc49390c12f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Area2/Shopkeeper#2.unity
+    guid: 93e6dd82f9e4d3843b42f68de6adac04
+  - enabled: 1
     path: Assets/Scenes/Levels/Elevator#Area2.unity
     guid: c366795329acbd04d844af43762c30b6
   - enabled: 1
@@ -63,6 +72,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Area2/Boss.unity
     guid: 138206205f7e45e47919173030f63ed2
   - enabled: 1
-    path: Assets/Scenes/Levels/Area2/Fan#2.unity
-    guid: f5cd673c3252e36498904bc49390c12f
+    path: Assets/Scenes/Levels/Area2/Elevator#Area2End.unity
+    guid: 7783c13e19e675549bd9a1c0d006917c
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ae9bdc235721bd94890470fd4213f668
   m_configObjects: {}

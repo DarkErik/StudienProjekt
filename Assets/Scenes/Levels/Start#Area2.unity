@@ -2261,7 +2261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   performer: []
-  keyname: i
+  keyname: left shift
 --- !u!114 &640385186
 MonoBehaviour:
   m_ObjectHideFlags: 0
